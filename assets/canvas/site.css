@@ -11,8 +11,8 @@ body.menu-open #menu-panel { display: flex; }
 .acc-item { background: #ffffff; border-radius: 16px; padding: 4px 26px; }
 .acc-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 18px 0; cursor: pointer; }
 .acc-icon { font-size: 20px; font-weight: 500; color: #D97757; flex-shrink: 0; }
-.acc-body { overflow: hidden; max-height: 0px; opacity: 0; transition: max-height 300ms ease, opacity 300ms ease, margin 300ms ease; font-size: 14px; line-height: 1.65; color: #8a7c6b; }
-.acc-item.open .acc-body { max-height: 900px; opacity: 1; }
+.acc-body { overflow: hidden; max-height: 0px; opacity: 0; margin: 0; transition: max-height 300ms ease, opacity 300ms ease, margin 300ms ease; font-size: 14px; line-height: 1.65; color: #8a7c6b; }
+.acc-item.open .acc-body { max-height: 900px; opacity: 1; margin-bottom: 20px; }
 
 .stack-mobile { }
 .hero-stack { }
