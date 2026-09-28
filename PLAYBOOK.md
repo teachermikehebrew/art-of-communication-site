@@ -17,7 +17,7 @@ domain, hosting decisions, and this GitHub repo.
 | Design source of truth | Claude canvas artifact: `https://claude.ai/artifact/Y9ZHuJ38CkidKPe8D5Yrat` (Design-type artifact, one `.dc.html` file per page under `project/`) |
 | Static site repo | `github.com/teachermikehebrew/art-of-communication-site`, branch `main` |
 | Live preview (no DNS needed) | `https://teachermikehebrew.github.io/art-of-communication-site/` |
-| Real domain (not yet live) | `artofcommunication.life` — still pointed at the old WordPress site |
+| Real domain (LIVE since 2026-09-28) | `artofcommunication.life` — DNS at Hostinger points at GitHub Pages; `CNAME` file present |
 | Live WordPress site (for pulling real content/links) | `https://artofcommunication.life/<slug>/` |
 
 ## Current status (as of this session)
@@ -237,3 +237,18 @@ curl -sS -o /dev/null -w "%{http_code}\n" https://teachermikehebrew.github.io/ar
 # exact launch args needed (chromium binary at /opt/pw-browsers/chromium-1194/chrome-linux/chrome,
 # needs --headless=new --no-sandbox, npm-install playwright into /tmp since it's not preinstalled)
 ```
+
+## Go-live log (2026-09-28)
+
+- Merged to `main`, then Mike changed DNS in Hostinger hPanel
+  (Domains → artofcommunication.life → DNS records). Deleted: `ALIAS @ →
+  artofcommunication.life.cdn.hstgr.net` (Hostinger CDN), `CNAME www →
+  …cdn.hstgr.net`, old AAAA @. Added: A @ → 185.199.108–111.153, CNAME www →
+  teachermikehebrew.github.io. Left alone: MX/SPF (Hostinger email), CNAME
+  learn → ssl.mn.co (Mighty Networks), ALIAS staging (old WP staging),
+  hostingermail CNAMEs.
+- Rollback: re-add `ALIAS @ → artofcommunication.life.cdn.hstgr.net` and
+  `CNAME www → www.artofcommunication.life.cdn.hstgr.net`, delete the 4 A
+  records, and remove the `CNAME` file from the repo.
+- `CNAME` file re-added at repo root. The `.github.io` preview URL now
+  redirects to the real domain (expected).
