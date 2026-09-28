@@ -4,6 +4,82 @@
 session (no memory of prior conversations) can pick up exactly where things
 left off.
 
+## ⚠️ 2026-09-28 evening: the site is now a static copy of the OLD WordPress layout
+
+Danny didn't like the new canvas design ("drab", "informational"). Mike asked
+to copy as much of the old layout as possible, across the board. Branch
+`old-layout` does that. Everything below this section describes the canvas
+design era and is **history**, kept for reference. The canvas artifact is
+**no longer the design source of truth**.
+
+**What the site is now.** The old Divi pages themselves, saved as static
+HTML: `<slug>/index.html` for 37 pages (home = `index.html`), plus every
+stylesheet, script, font and image they use, under `/wp-content/` and
+`/wp-includes/` at their original paths. Checked with pixel-by-pixel
+screenshots against the old server at 1440 / 768 / 390px widths
+(`tools/old-site/compare.py`).
+
+**Pages.** The 30 pages Mike chose to keep, plus the 7 "Intro Course" funnel
+pages (`/introcourse`, `/aoc-intro-9v2k7`, `/presence-flow-x4m1`,
+`/connection-lab-8p3z`, `/heart-skill-j6r2`, `/deep-learning-q9n5`,
+`/attuned-q9n5`). Those 7 were on the retire list, but they're live: the
+site's email pop-up (Kit form 9323923, ~5 sign-ups/3 weeks) redirects new
+subscribers to `/aoc-intro-9v2k7/`, and Kit sequence "Intro Course" (2719511,
+73 subscribers) links lessons 1–5 to them. The other 14 retired URLs still
+redirect home. Root-level `foundations.html` etc. (new-design URLs from
+2026-09-28 morning) now redirect to `/<slug>/`.
+
+**How it was built** (`tools/old-site/`, run from a folder holding `raw/` and
+`site/`):
+1. `mirror.py`: fetches each page from the old Hostinger server (pinned
+   by IP with `curl --resolve`, because the domain points at GitHub now) with
+   `?LSCWP_CTRL=before_optm`, which returns the page *before* the LiteSpeed
+   plugin bundles its CSS. Then downloads every referenced asset, including
+   url()/@import inside CSS and JSON-escaped URLs.
+2. `fontfaces.py`: reads the LiteSpeed CSS bundle the old site actually
+   served per page and saves its @font-face rules. This matters: LiteSpeed
+   fetched Google Fonts server-side and got static .ttf files (slightly wider
+   than the variable fonts a browser gets, so text wrapped differently), and
+   it dropped some families entirely (Cormorant Garamond, Manrope, Libre
+   Baskerville, Nunito Sans never loaded on the old site). Visitors saw that
+   result, so the copy reproduces it.
+3. `build.py <repo>`: makes self-links root-relative (canonical/og:url stay
+   absolute), strips WP-only head tags, swaps Google Fonts links for the
+   per-page font file in `/wp-content/gfonts/`, and **restores LiteSpeed's
+   CSS order** (every other style first, including body `<style>` blocks,
+   then Divi's `divi-dynamic-css`, then Divi's `*-deferred-*` CSS; the
+   unbundled order made different rules win). It also injects an
+   `admin-ajax.php` shim after jQuery and applies `patches.py`.
+4. `patches.py`: content fixes on top of the old pages. Each must match
+   an exact count or the build stops. Currently: /introsession date (Oct 5
+   2026) + form, /pastparticipants "new cohort" form.
+
+**The email pop-up (Bloom)** still uses Bloom's own JS/CSS. The shim answers
+its `bloom_subscribe` call by POSTing straight to Kit
+(`https://app.kit.com/forms/9323923/subscriptions`, CORS allows it), then
+Bloom does its normal success redirect to `/aoc-intro-9v2k7/`. Tested with
+Kit's endpoint intercepted (`popup_test.py`). **A real sign-up has not been
+tested yet**, since that would add a subscriber.
+
+**Editing from now on.** Once Hostinger web hosting is cancelled the mirror
+can't be re-run, so the built HTML in this repo *is* the source. Edit
+`<slug>/index.html` directly. It's Divi markup (`et_pb_*` modules), so find
+the text and change it in place. The header/menu (Divi Theme Builder
+`tb-1650`) is copied into every page. A menu change means the same edit
+across all pages (script it). Menu items link through Divi's JS (`et_clickable`),
+not plain `<a href>`: test by clicking (`navtest.py`), not by grepping. After
+any edit, run `errsweep.py` (JS errors/404s) against a local
+`python3 -m http.server`.
+
+**Known, deliberately left as on the old site:** stale dates on
+`/cohort` (May–Jul 2025), `/meditators-course`, `/level-3-art-of-honesty`
+(Apr–Jun 2025); old copy on the three registration-closed variants
+(`/foundationsinactive`, `/artofempathyinterest`,
+`/home-closed-for-current-cohort`); Doctors' "Free Intro Session Sep 27"
+block (still waiting on Mike, same as before). None of these pages are in
+the menu. The canvas-era rebuild had modernised them; ask Mike before
+touching.
+
 ## The project
 
 Rebuilding Danny Cohen's NVC training site (currently live WordPress/Divi
