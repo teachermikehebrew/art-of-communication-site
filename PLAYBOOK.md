@@ -252,3 +252,4 @@ curl -sS -o /dev/null -w "%{http_code}\n" https://teachermikehebrew.github.io/ar
   records, and remove the `CNAME` file from the repo.
 - `CNAME` file re-added at repo root. The `.github.io` preview URL now
   redirects to the real domain (expected).
+- HTTPS certificate issued; Mike ticked Enforce HTTPS in repo Settings → Pages (`http://` now 301s to `https://`). Old WordPress hosting on Hostinger can be cancelled after a week or two of stability — keep domain + email there.
