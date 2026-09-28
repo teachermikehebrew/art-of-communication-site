@@ -411,3 +411,16 @@ site too, since the Divi 5 upgrade). Each page that has them carries
 `<style id="aoc-waypoint-fix">.et-waypoint:not(.et_pb_counters){opacity:1!important}</style>`
 before `</head>` (commit 661423c, 2026-09-28). Any new page copied from Divi
 markup with `et-waypoint` images needs the same line, or its images vanish.
+
+## Menu toggle, pop-up buttons, Rabbis hero (2026-09-28)
+- The slide-in menu is opened by one plain-JS click listener per page
+  (replaces the Divi code module's jQuery double-toggle). It derives the
+  icon's `open` class from the panel's `slide-in-menu` class, so they
+  always match. Any new page needs the same script in its header.
+- `trigger_popup` buttons never had a click handler on the static site
+  (the Bloom pop-up is timer-only). Home "Free Intro Course" / "Get the
+  Guide" and /cohort "Get the Guide" now link to
+  https://art-of-communication.kit.com/introcourse. No separate "guide"
+  opt-in exists anywhere we could find.
+- /rabbis carries `<style id="aoc-hero-fit">` removing the hero's
+  843px max-height (≥768px), so the Apply button stays inside the photo.
