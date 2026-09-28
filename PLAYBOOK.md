@@ -6,6 +6,14 @@ left off.
 
 ## ⚠️ 2026-09-28 evening: the site is now a static copy of the OLD WordPress layout
 
+**LIVE since 2026-09-28 ~16:28 GMT** (main = old-layout, commit 1177138), with
+Mike's go-ahead. Live domain pixel-checked against the old server afterwards:
+matches. Push over SSH (`origin` = `git@github.com:teachermikehebrew/art-of-communication-site.git`;
+HTTPS has no stored credentials on Mike's Mac). Rollback: `git push -f origin 5e58c64:main`
+restores the canvas design. A preview copy lived at teachermikehebrew.github.io
+(repo `teachermikehebrew.github.io`, no CNAME). Mike to delete it himself
+(deleting a repo is his call).
+
 Danny didn't like the new canvas design ("drab", "informational"). Mike asked
 to copy as much of the old layout as possible, across the board. Branch
 `old-layout` does that. Everything below this section describes the canvas
