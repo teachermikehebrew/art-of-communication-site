@@ -273,3 +273,49 @@ full-bleed photo hero (`.hero-full` / `.hero-shade` / `.hero-copy` in
 site.css; per-page framing via `--pos-d` / `--pos-m`). Photos live in
 `assets/heroes/`. Empathy uses the `.hero-bottom` variant (text along the bottom) because its
 photo has faces at both edges. Still on the old boxed-photo hero: Coaching.
+
+## Session handoff (2026-09-28, end of day)
+
+**Live and working:** all 27 kept pages + 22 redirects + blog on
+artofcommunication.life (GitHub Pages, HTTPS enforced). Full-photo headers on
+Home, Foundations, Doctors, Rabbis, Empathy (+ their registration-closed
+variants). Footers read "© 2026 The Art of Communication" (names removed at
+Mike's request). Foundations mission line: "a grounded, practice-rich path
+into…" (site + canvas).
+
+**Open items, in priority order:**
+1. **Danny's feedback: the new look feels "drab / informational"; he wants
+   the old WordPress aesthetic back** ("it looked great before"). Plan: keep
+   content/structure, restyle to match the old site. BLOCKED on seeing the
+   old site:
+   - Internet Archive has the old pages but NOT their stylesheet/images, so
+     renders are unstyled. One surviving clue: the "Hi, I'm Danny" block was
+     deep burgundy `#6c2940` beside cream — the old palette was bolder.
+   - Old WordPress still runs on Hostinger server `77.37.35.80`
+     (srv1371 / uk-fast-web1371.hstgr.io), but this sandbox's egress proxy
+     blocks raw-IP connections and resolves the domain to GitHub, so Claude
+     can't load it. `staging.artofcommunication.life` returns a WP 500 error.
+   - Asked Mike for either (a) a Hostinger "Preview website" / temporary
+     `*.hostingersite.com` link (Claude can load that), or (b) screenshots,
+     e.g. via a temporary `/etc/hosts` line `77.37.35.80 artofcommunication.life`
+     on his Mac (remove afterwards). Then: mock up Home in the old style for
+     Mike + Danny to approve before going live.
+   - Do NOT use the phpMyAdmin / File Manager session links Mike pasted —
+     they're logged-in admin surfaces.
+2. **Doctors page:** the "Free Intro Session" section still says Sep 27, 2026
+   (past). Header line already removed. Ask Mike what replaces it.
+3. **Coaching:** still on the old boxed-photo hero — waiting on a photo.
+4. **Community page** lists Mike as a lead facilitator (content, not
+   footer) — left in place; ask if he wants it removed.
+5. **Danny's Mac** showed a certificate warning after the DNS switch; his
+   phone was fine → stale DNS cache on his network (restart Mac/router or
+   wait). Site itself verified valid via SSL Labs.
+6. Cancel Hostinger **web hosting** after a week or two of stability (keep
+   domain + email). WP needs to stay up until item 1 is resolved, since it's
+   the only full copy of the old design.
+
+**Workflow reminders:** edit static HTML directly, commit on the session
+branch, then fast-forward `main` (Mike approved publishing to main); bump the
+`site.css?v=` stamp whenever site.css/js changes (see above); new full-photo
+headers: `.hero-full` markup (see index.html / doctors.html), `.hero-bottom`
+variant when faces sit at both edges of the photo.
