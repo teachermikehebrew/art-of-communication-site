@@ -57,12 +57,30 @@ domain, hosting decisions, and this GitHub repo.
 
 **Not started / explicitly deferred:**
 - **Blog page** (`blog.html`) — just a "coming soon" stub.
-- **The other ~40 WordPress pages** (full list: `wp-sitemap-posts-page-1.xml`
-  and `wp-sitemap-posts-post-1.xml` on the live site). Mike went through them
-  in a chat on 2026-09-27 and decided which to build vs. drop, but that list
-  was NOT recorded here — get it from Mike, then record it below. Each
-  dropped page should get a redirect stub (like the 5 above) so old links in
-  emails/Google don't 404 after cutover.
+- **The other WordPress pages — Mike's decision (2026-09-27, from Drive
+  `Work/Danny/D 🌐 Website Rebuild/Website Rebuild - Notes.md`):**
+  - **Recreate (27 total).** Done: `/`, `/foundations`, `/empathy`,
+    `/doctors`, `/rabbis`, `/coaching` (+ `/blog` as a stub). Still to build
+    (20): `/artofempathyinterest`, `/foundationsinactive`,
+    `/home-closed-for-current-cohort`, `/accompaniment`, `/guidethanks`,
+    `/preferences`, `/paymentthanks`, `/paymentorientation`,
+    `/cancellation-policy-1-1-coaching`, `/course-cancellation-policy`,
+    `/course-cancellation-policy-selfpaced`, `/introsession`, `/newsletter`,
+    `/cohort`, `/community-gateway`, `/community`, `/pastparticipants`,
+    `/how-we-relate-to-money`, `/meditators-course`,
+    `/level-3-art-of-honesty`. Also the 3 blog posts.
+  - **Redirect to homepage (done — stub `<slug>/index.html` files):**
+    `/jorinde`, `/testimonials`, `/the-plan`, `/introcourse`, `/attuned-q9n5`,
+    `/deep-learning-q9n5`, `/heart-skill-j6r2`, `/connection-lab-8p3z`,
+    `/presence-flow-x4m1`, `/aoc-intro-9v2k7`, `/introdenizen`,
+    `/denizenfoundations`, `/1-1denizen`, `/denizennvc`, `/home`, `/hometest`,
+    `/homeold`, `/level-2-art-of-empathy`, `/level-1-art-of-communication`,
+    `/coachingold`, `/executive-course`. (The notes say 22 but list 21.)
+  - **Undecided:** `/webinar` ("Webinar open") appears in neither list.
+  - Hosting: the notes planned Netlify/Vercel; we're using GitHub Pages
+    instead (same idea: static, git-based, auto-deploy). Domain + email stay
+    at Hostinger; only the root A records change. WP stays up as a fallback
+    until the new site is confirmed stable.
 - **Note:** `learn.artofcommunication.life` is Mike's Mighty Networks
   community — never touch that DNS record.
 - **DNS cutover** — the actual "go live" step. See below.
