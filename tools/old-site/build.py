@@ -137,6 +137,18 @@ def main():
         src = os.path.join(SITE, tree)
         if os.path.isdir(src):
             shutil.copytree(src, os.path.join(DEST, tree), dirs_exist_ok=True)
+    # Divi's cached CSS points background images at https://artofcommunication.life/...
+    # Make those site-relative so the files load from wherever the site is hosted
+    # (the preview repo, or the real domain if it ever moves).
+    for tree in ("wp-content", "wp-includes"):
+        for d, _, files in os.walk(os.path.join(DEST, tree)):
+            for f in files:
+                if not f.endswith((".css", ".js")): continue
+                path = os.path.join(d, f)
+                txt = open(path, encoding="utf-8", errors="surrogateescape").read()
+                new = re.sub(r'https?://(?:www\.)?artofcommunication\.life(?=/)', "", txt)
+                if new != txt:
+                    open(path, "w", encoding="utf-8", errors="surrogateescape").write(new)
 
 if __name__ == "__main__":
     main()
