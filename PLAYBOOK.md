@@ -88,7 +88,7 @@ domain, hosting decisions, and this GitHub repo.
     `/denizenfoundations`, `/1-1denizen`, `/denizennvc`, `/home`, `/hometest`,
     `/homeold`, `/level-2-art-of-empathy`, `/level-1-art-of-communication`,
     `/coachingold`, `/executive-course`. (The notes say 22 but list 21.)
-  - **Undecided:** `/webinar` ("Webinar open") appears in neither list.
+  - `/webinar` (in neither list) → Mike said redirect to homepage (2026-09-28); done.
   - Hosting: the notes planned Netlify/Vercel; we're using GitHub Pages
     instead (same idea: static, git-based, auto-deploy). Domain + email stay
     at Hostinger; only the root A records change. WP stays up as a fallback
