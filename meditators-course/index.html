@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundations Course for Meditators — The Art of Communication</title>
+<link rel="icon" href="../assets/canvas/537305ff.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/canvas/site.css">
+</head>
+<body>
+<div class="no-shrink-text" style="width: 100%; min-height: 100vh; box-sizing: border-box; background: #fdf6ee; overflow-x: hidden; position: relative; display: flex; flex-direction: column;">
+
+  <!-- HEADER -->
+  <div class="pad-header" style="display: flex; align-items: center; justify-content: space-between; padding: 24px 64px;">
+    <a href="../index.html" style="display: flex; align-items: center; gap: 12px;">
+      <img src="../assets/canvas/537305ff.png" alt="Art of Communication" style="height: 34px; width: auto; display: block;">
+      <span style="color: #4a3c2c; font-family: 'Ubuntu', sans-serif; font-weight: 500; font-size: 15px;">The Art of Communication</span>
+    </a>
+    <button aria-label="Open menu" onclick="toggleMenu()" style="background: #fff; border: none; border-radius: 999px; padding: 12px 18px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 12px rgba(74,60,44,0.08);">
+      <span style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+      </span>
+    </button>
+  </div>
+
+  <div id="menu-overlay"></div>
+  <div id="menu-panel">
+    <div style="display: flex; justify-content: flex-end; padding: 0 24px 16px;">
+      <button aria-label="Close menu" onclick="toggleMenu()" style="background: #f3e9db; border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; color: #4a3c2c; cursor: pointer;">&times;</button>
+    </div>
+    <a href="../foundations.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Foundations Course</a>
+    <a href="../empathy.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Art of Empathy (Level II)</a>
+    <a href="../doctors.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Doctors Cohort</a>
+    <a href="../rabbis.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Rabbis Cohort</a>
+    <a href="../coaching.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Executive Coaching</a>
+    <a href="../blog.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Blog</a>
+    <a href="mailto:mike@artofcommunication.life" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Contact</a>
+    <div style="padding: 16px 20px 0;">
+      <a href="https://art-of-communication.kit.com/introcourse" style="display: block; text-align: center; background: #D97757; color: #fff; font-weight: 600; font-size: 14px; padding: 14px; border-radius: 999px;">Free Intro Course</a>
+    </div>
+  </div>
+
+  <div style="flex: 1;">
+    <div class="pad-md" style="padding: 40px 64px 80px;">
+      <div class="hero-stack" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 0.9fr; gap: 56px; align-items: center;">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 8px 18px; border-radius: 999px; color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 28px;">The Art of Communication</div>
+          <h1 style="font-size: 44px; line-height: 1.15; font-weight: 500; margin: 0 0 20px;">Foundations Course — For Meditators</h1>
+          <p style="font-size: 18px; line-height: 1.6; margin: 0 0 32px; max-width: 500px; color: #8a7c6b;">Personal growth and relational skillfulness taken to the next level.<br><br><strong style="color: #4a3c2c;">Currently closed for registration</strong> — join our newsletter to hear about upcoming courses, or see our current Foundations cohort.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px;"><a href="../newsletter/" style="display: inline-block; padding: 16px 30px; border-radius: 999px; background: #D97757; color: #fff; font-weight: 600; font-size: 15px;">Join the Newsletter</a><a href="../foundations.html" style="display: inline-block; padding: 16px 30px; border-radius: 999px; background: #fff; color: #4a3c2c; font-weight: 600; font-size: 15px; box-shadow: 0 2px 12px rgba(74,60,44,0.08);">Current Foundations Cohort</a></div>
+        </div>
+        <div style="position: relative;">
+          <div style="position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; background: #f3ddc4; border-radius: 28px;"></div>
+          <img src="../assets/canvas/c22413f0.jpg" alt="Danny Cohen" style="position: relative; width: 100%; border-radius: 28px; display: block; object-fit: cover; aspect-ratio: 4/3.2; object-position: center 20%;">
+        </div>
+      </div>
+    </div>
+
+    <div class="pad-lg" style="background: #ffffff; padding: 90px 64px; border-radius: 40px 40px 0 0;">
+      <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 16px 48px rgba(74,60,44,0.12); aspect-ratio: 16/9; max-width: 900px; margin: 0 auto;">
+        <iframe src="https://www.youtube.com/embed/SshBIu9TO8E" title="Foundations Course for Meditators" style="width: 100%; height: 100%; border: none; display: block;" allowfullscreen></iframe>
+      </div>
+      <div style="max-width: 720px; margin: 56px auto 0; text-align: center;">
+        <p style="font-family: 'Ubuntu', sans-serif; font-size: 20px; line-height: 1.6; font-style: italic; color: #4a3c2c; margin: 0 0 10px;">“It is as though she listened and such listening as hers enfolds us in a silence in which at last we begin to hear what we are meant to be.”</p>
+        <div style="font-size: 14px; color: #b0a493;">Lao Tze</div>
+      </div>
+      <div style="max-width: 820px; margin: 64px auto 0;">
+        <h2 style="font-size: 30px; font-weight: 500; margin: 0 0 24px;">What is this course about?</h2>
+        <p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">Having sat dozens and dozens of silent retreats over the years, one of the things I find lamentably consistent is the paucity of guidance about how to live practice in our relational lives.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">The guidelines are simple – don’t lie, be honest, be generous, right speech, etc, but from my experience most people don’t get the scaffolding or wisdom or modeling that shows <em>how</em> to do that in real life and when there’s friction, feelings, disagreement…nor do we get much that shows us just how rich and beautiful relating can be on a regular basis.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">We need more illumination of how through our standard socialization, culture, conditioning, and wounding we are unconsciously perpetuating suffering and conflict, sense of scarcity, separateness, and estrangement.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">I think mostly we don't realize how far we are from living in the gift, that it really can be possible, on a regular basis, to live in a flow of mutual giving and receiving from the heart. That there is a reliable way to create the relational safeness where our natural 'ventral vagal' prosocial tendencies come online, without needing years of practice.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">When we learn these ways of being together and being with ourselves, the possibility of a deeply integrated spirituality, lived in relationships, in material life, in work life, comes clearer into focus. Being touched by each other, even when starting from conflict becomes a much more common occurrence. And we can start to delight in and develop an artistry of being alive together.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">The ways we think about and communicate with each other daily so often lead to conflict, resentment, and friction. For many people relationships feel flat, lacking inspiration, energy, and meaningful connection. They drain our batteries rather than charging us. Whether with children, employees, partners, or even ourselves, we can resort to sticks and carrots, guilting, shaming, and shoulding, in a self-fulfilling sense that it’s the only way anything will get done. While this seems ‘natural’, in fact it is more a reflection of the standard SOS (societal operating system) than what evolution intended (thriving through connection and collaboration). This SOS is so ubiquitous and deeply ingrained that we may not recognize it and may so rarely encounter an alternative that we don’t know one exists.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;"><strong style="color: #4a3c2c;">Fortunately, there is another way.</strong> <strong style="color: #4a3c2c;">This course shows that way.</strong></p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">The key is a radically different approach to relating that puts our nervous systems in a state where we feel that we’re on the same team. This is a way into connection that doesn’t depend on agreement and isn’t about being ‘nice’ rather than real. And there are maps and skills to be learned that make this readily available.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">How will <em>your</em> life be different when you have more enjoyable closeness, efficient collaboration, and confidence about moving through conflict to connection?</p>
+        <p style="font-size: 16px; line-height: 1.75; margin: 0 0 0px; color: #8a7c6b;">Exploring new ways of relating naturally happens best with other people. This kind of learning needs to be experiential and relational to catalyze real growth and lasting change. Continuously people give the feedback that the space of connection in the course is something they've never experienced before, and on Zoom no less.</p>
+      </div>
+    </div>
+
+    <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px;">
+      <div style="max-width: 860px; margin: 0 auto; background: #ffffff; border-radius: 28px; padding: 48px;" class="pad-md">
+        <h2 style="font-size: 28px; font-weight: 500; margin: 0 0 24px;">What you will learn ✅</h2>
+        <ul style="font-size: 16px; line-height: 1.7; color: #6b5f52; padding-left: 22px; margin: 0 0 20px;">
+            <li style="margin-bottom: 12px;">How different approaches to communicating affect the nervous system and how to leverage evolutionary programming for <strong style="color: #4a3c2c;">easeful and effective relating</strong></li>
+            <li style="margin-bottom: 12px;">The anatomy of argument and how to have <strong style="color: #4a3c2c;">collaborative, generative dialogue</strong> without giving up on what's important to you</li>
+            <li style="margin-bottom: 12px;">How to think and communicate in ways that piss people off and stress you out</li>
+            <li style="margin-bottom: 12px;">OR, if that's👆🏼 not your jam, <strong style="color: #4a3c2c;">how to connect beyond the surface</strong> and communicate your needs in ways that people want to partner with you in meeting them</li>
+            <li style="margin-bottom: 12px;">Essence of Emotional Intelligence, aka What the heck feelings are for and <strong style="color: #4a3c2c;">how even 'negative' feelings can be helpful</strong></li>
+            <li style="margin-bottom: 12px;">The way to <strong style="color: #4a3c2c;">create more psychological safety</strong>, the key element for successful teams and meaningful relationships *</li>
+            <li style="margin-bottom: 12px;"><strong style="color: #4a3c2c;">How to hear criticism</strong>, judgment, and pushback like an aikido master</li>
+            <li style="margin-bottom: 12px;">The way to make collobarative <strong style="color: #4a3c2c;">decisions where everyone is on board</strong> (hint: it's not about compromise</li>
+        </ul>
+        <p style="font-size: 13px; line-height: 1.6; color: #b0a493; margin: 0;">* Edmondson, Amy C. <em>The Fearless Organization: Creating Psychological Safety in the Workplace for Learning, Innovation, and Growth</em>. Hoboken, NJ: John Wiley & Sons, 2018.</p>
+      </div>
+    </div>
+
+    <div class="pad-lg" style="background: #ffffff; padding: 90px 64px;">
+      <div style="max-width: 860px; margin: 0 auto;">
+        <h2 style="font-size: 30px; font-weight: 500; margin: 0 0 24px;">Curriculum</h2>
+        <p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">This course is the fruit of the past 14 years of my explorations, studies, and training in the skills and consciousness of relational artistry and communication, both interpersonal and intrapersonal, based on the approach known around the world as NVC, (Nonviolent Communication), developed by Marshall Rosenberg, PhD.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">NVC is a simple and powerful tool, rooted in radical honesty and a deep quality of empathy, which aims to connect human beings to their common humanity. It provides clear and accessible tools for connecting with ourselves and relating to each other with compassion, paving the way for generative dialogue and integrative solutions that transcend the familiar options of win, lose, and compromise.</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">‘Nonviolent’ can be a misleading term without delving deeper into its origins, perhaps seemingly irrelevant if you’re not shouting at or beating anyone. It speaks to a way of working and relating from collaborative flow, fueled by mutual care and shared purpose (renewable energy sources).</p><p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">This course teaches how to create that quality of connection where bodies and hearts can relax and flow together, so that our nervous systems can be in the state where connection and collaboration are natural. As this is not the default in most people, relationships, and organizations these days, NVC focuses on becoming aware of the programming that alienates us from that and what we can do differently to restore that flow.</p>
+        <p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">The curriculum is divided into 9 units taught over 12 weeks. Some portions of this course will include guest presentations by relevant experts. The entirety of the course will be supported by a team of experienced assistants, each trainers and coaches in their own right.</p>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 32px;">
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">1</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Foundations of Relational Dynamics</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">This module will build the foundation on which the course rests, and on which we can learn to rest more in our relating. We'll learn the basics of Polyvagal Theory, an understanding of how the nervous system works that illuminates how common ways of communicating trigger counterproductive reactions. We'll learn how to navigate toward the 'green' zone where people are naturally prosocial. You'll be introduced to a map for generative dialogue and to the key skill that transforms dialogue from a competition into a collaboration.</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">2</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Consciousness of Domination or Collaboration</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">The operating system we run has a lot to do with the output we experience. Throughout the course we will be expanding our awareness of the 'jackal' consciousness- the many ways right/wrong, either-or, and power-over thinking infiltrate our thinking and communication, constrain possible outcomes, and keep us mired in scarcity, separateness, and powerlessness.</span><span style="display: block; margin: 12px 0; padding-left: 16px; border-left: 3px solid #f3ddc4; font-style: italic; color: #6b5f52;">Over the years, I learned that different things work for different people in the area of personal healing and growth, but there is one modality I recommend to everyone without reservation, and that is NVC. <em>(Bo Shao, Chairman Evolve)</em></span><span style="display: block; margin-bottom: 12px;">We'll learn and lean into Needs-based Relating. Think of that scene in the matrix where Neo sees the numbers that are actually animating the scene. Consciousness, clarity, and communication of life-needs (very different from the way we usually use word need) leads the way back to our deeper human nature expressed in the flow of giving and receiving from the heart. Thousands of years of collective trauma running the 'jackal' operating system may be manifesting right now if you're having doubts or thinking of little evidence to believe that people really want to live from care and giving.</span><span style="display: block; margin-bottom: 12px;">We'll see how the focus on strategies entrenches conflict and scarcity and how engaging directly around life-needs (cares at the core) opens the way for creating coherence in relational systems. Coherence potentiates self-organization and mutually satisfying outcomes.</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">3</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Emotional Intelligence 101</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">Why do we have feelings? And what do we do with all those 'negative' feelings that seem to so complicate life and relationships?</span><span style="display: block; margin-bottom: 12px;">In this module we learn precisely how all feelings are part of our onboard guidance system, how we can access the embodied intelligence that feelings express, how to meet others' (and our own) feelings with grace and equanimity, and how to welcome feelings as a gateway to relational coherence, fuller connection, and more congruent life choices.</span><span style="display: block; margin: 12px 0; padding-left: 16px; border-left: 3px solid #f3ddc4; font-style: italic; color: #6b5f52;">Danny helped me notice patterns of relating and communicating that were causing harm, understand the root of these patterns, and develop practices that helped me be more aware of my feelings, the needs they were indicating, and strategies to meet those needs. (Sydney Bolger)</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">4</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Listening Magic</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">Biologically, we are wired for connection, driven by a deep need and longing to be understood, to be gotten. Having that experience triggers the release of oxytocin, dopamine, and endorphins, nourishing the brain and body with a sense of happiness, trust, wellbeing, and mood regulation. Attuned empathy creates intimacy, as Ether Perel says "into-me-see". Knowing how to create that is a superpower that can transform many situations into rich doorways into connection, even conflict (after all, we only get into conflict when there is something that matters to us, and doesn't that sound like a key ingredient for meaningful connection?).</span><span style="display: block; margin-bottom: 12px;">That said, most people don't really know how to listen in a way that creates this quality of connection that doesn't depend on agreement. They don't know the difference between empathy and sympathy, they offer well-intentioned but mis-attuned advice and support in ways that don't lead to real completion, or try 'active listening' techniques that feel way too much like...techniques.</span><span style="display: block; margin: 12px 0; padding-left: 16px; border-left: 3px solid #f3ddc4; font-style: italic; color: #6b5f52;">It is that moment of silence when you are in awe because you feel like it's not so terrible, that there is space for you, that you are understood more than you thought, that you are not alone. (Sarah Mann)</span><span style="display: block; margin-bottom: 12px;">In this module we'll learn the foundational 'dance steps' that turn relating into an art. Many (including me) find this to be the master key that unlocks relationships.</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">5</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Beyond Right and Wrong - Creating Shared Reality</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">In this module we’ll get stuck into how we can have entrenched and ongoing arguments about whose opinion is right and who’s wrong, bad, and to blame…just kidding. We do that enough as it is, don’t we? And even when the other person gives in “fine, you’re right!”, it’s not ultimately satisfying, is it? Instead, in this module we’ll learn a way of creating shared reality, the first step in being able to talk through stuff that isn’t working for us without immediately stimulating defensiveness or resentment. We’ll learn how to step out of the suffering of right/wrong thinking (it’s not about being ‘nice’ and how to use our judgments of others and ourselves (inner critic) as doorways to deepr connection. You’ll also learn the more potent alternative to praise, rewards and compliments that fuels intrinsic motivation, meaningfulness, and richer connection. We’ll become more conscious of how much we act and try to get others to act out of shame, guilt, and fear-based motivation, whether children, partners, employees, or ourselves.</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">6</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">“I have a complaint” or “I have a dream”: how to help people enjoy caring for your needs</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">Nonviolent Communication presupposes that one of our most important needs is to contribute. Yet that can be far from our lived experience - we can live with a sense that the only way to get our needs met is to cajole, to demand, to incentivize, to threaten; that people are selfish and that anytime we ask for what we want people either give in from a sense of ‘have to’ or ‘should’ or we feel like a burden or hide behind the power of our role. Even if the same thing gets done, the energy and impact are very different when it’s done as an act of giving, rather than giving in.</span><span style="display: block; margin: 12px 0; padding-left: 16px; border-left: 3px solid #f3ddc4; font-style: italic; color: #6b5f52;">NVC not only improves the connection among people, but also greatly improves efficiency of communication. (Baiya (Zhu Ning), CEO of Youzan)</span><span style="display: block; margin-bottom: 12px;">The art of requests and agreements leads to true giving, more choice, more agency, more needs being met, and a much greater sense of aliveness and confidence around relationships, whether personal or professional, offering both connection and efficacy. This unit includes practical elements of effective requests and the both/and consciousness that opens the flow of giving.</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">7</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Presence & Internal Alignment</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">True, magnetic power comes from presence. Rich relationships and creativity emerge from being connected and coherent inside. Burnout, burden, indifference, people-pleasing, either/or (eg either me or them), triggers, chronic fatigue or chronic stress, to name a few, all diminish our presence and point to a need for deeper self-connection and inner integration. We can be saddled with ‘shoulds’, mired in being hard on ourselves, say yes to things that we don’t feel a yes to and feel like freedom and flow exist only on very rare occasions, or only for others. In this module we shine the light of awareness on our internal operating system and see how the consciousness and tools of NVC can help us access more inner freedom and choice, and more self-compassion and graceful growth in the times when we’ve been less than perfect.</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">8</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Effective Honesty</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">In learning Nonviolent Communication there’s a common <em>mis</em>conception that it’s about speaking softly and politely and not having any intense emotions. There’s a book whose title I really like called <em>Don’t be Nice, Be Real</em>. Often times people either withhold their honesty out of fear of ‘rocking the boat’ or express their honesty in ways that reenforce how doing so comes at a cost. This is because few of us have had much modeling of how to “speak truth with care,” to be <em>skillfully real</em>. In effective self-expression, we leverage the power of human resonance and request, using what we’ve learned so far to deepen our authenticity, power, and ability to be real <em>and</em> relational.</span><span style="display: block; margin: 12px 0; padding-left: 16px; border-left: 3px solid #f3ddc4; font-style: italic; color: #6b5f52;">"This material is applicable in all spheres of your life where you want to a) express yourself authentically and fully and create an environment where hearts and minds can relax and b) hold both your needs and the other persons with care and love." (Michael Heinrich, Founder and CEO Garten)</span></div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">9</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Collaborative Systems</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="margin-left: 29px; line-height: 1.7;"><span style="display: block; margin-bottom: 12px;">People who learn and experience these ways of relating sooner or later tend to have some eureka moment, realizing experiences of ease, harmony, significant shifts, meaningfulness, the falling away of conflict…And yet, trying to communicate this way while embedded in disempowering structures that emphasize scarcity, separateness, and powerlessness is like rowing upstream while tied to the shore– you’ll only get so far. In this module we’ll explore applications of the principles we’ve been learning to some of the social systems in which we're embedded.</span></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px;">
+      <div class="stack-mobile" style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center;">
+        <img src="../assets/canvas/c22413f0.jpg" alt="Danny Cohen" style="width: 100%; max-width: 300px; border-radius: 24px; display: block; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%;">
+        <div>
+          <div style="color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 12px;">YOUR GUIDE</div>
+          <h2 style="font-size: 28px; font-weight: 500; margin: 0 0 20px;">Danny Cohen</h2>
+          <p style="font-size: 16px; line-height: 1.75; margin: 0 0 0px; color: #8a7c6b;">After finishing my degree from the Wharton School of Business in 2010, I’ve made it my business to explore what was missing for me in that education. It’s been a deep dive into wisdom traditions, psychotherapy training, mindfulness (including 15+ months on retreat), systems thinking, mysticism, Nonviolent Communication, and a heck of a lot of experimenting and learning, sharing the fruits of my path in trainings for thousands of people around the world along the way. Since 2019 I’ve been part of the core faculty of the Evolve Foundation, working with dozens of CEOs eager to bring more heart, humanness, and efficacy into their relationships and communication.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pad-lg" style="background: #f7ede0; padding: 90px 64px;">
+      <div style="max-width: 1180px; margin: 0 auto;">
+        <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 48px;">Testimonials</h2>
+        <div class="masonry" style="column-count: 3; column-gap: 20px;">
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">"I feel so grateful to be a part of this class. The content renews me with hope in a way that I haven’t experienced in a long time. I feel hopeful about my ability to connect with others, and can imagine a beautiful world where needs are acknowledged and met. More specifically, what leaves me with awe, is how in class you take a structured approach and keep up a quick pace of moving through the material that fulfills the yearning for effectiveness and progress that I feel whenever I’m a student. And quite miraculously I find that you simultaneously are incredibly present in the moment, giving of yourself emotionally and really absorbing and reflecting every contribution made in the class."</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Sarah Rashba</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">“Learning NVC was like learning the fine melody of the heart, it helps navigate through the delicate and precious act of two people's conflicts coming together from off key into a harmony. It is that moment of silence when you are in awe because you feel like it's not so terrible, that there is space for you, that you are understood more than you thought, that you are not alone, that you are not in survival and that the 'other' can live in this small eco system you've built. There is room for two, there is room for more because you aren't taking away from the other nor do you contradict. Learning with Danny has helped me not to give up in situations when it felt like the other could not possibly understand. It was like watching a master paint a masterpiece which is called compassion. It's a reminder that life’s conflicts can look and feel different and can be translated into care.”</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Sarah Mann</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">"I can’t say enough how great both this course and Danny are and how essential this is for any relationship. Danny is a true master at making this material accessible, digestible and practical. I was able to create an open heart relationship with a complete stranger in a few simple sentence exchanges. I have never experienced anything like this. This material is applicable in all spheres of your life where you want to a) express yourself authentically and fully and create an environment where hearts and minds can relax and b) hold both your needs and the other persons with care and love."</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Michael Heinrich, Founder and CEO Garten</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">"Danny Cohen’s Art of Communication course was consistently a highlight of my week. My partner and I took this course together during a particularly challenging time in our relationship—we were on the brink of separating because we were having a hard time communicating our feelings and needs, and empathizing with the needs of one another. This course gave us powerful practices that helped us navigate some of our most difficult conversations. Danny embodies the nonviolent communication practices he teaches, demonstrating the depth of his knowledge. He creates a container that invites both deep vulnerability and playfulness, a magical combination for learning. Working with Danny was truly transformational. I feel lucky to have found a lifelong teacher and friend."</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Sydney Bolger</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">(from the spouse of a participant) “Let me be a witness that she is really integrating it in a really helpful way - I’m seeing her do that with other people around us and it’s happening in my relationship with her where I feel more ease and comfort in bringing up something difficult to her because she’s responding in a way that’s working much better for me. It’s really a pretty big deal…"</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Yoni Ashar, phD Clinical psychologist and neuroscientist</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">"Over the years I learned that different things work for different people in the area of personal healing and growth but there is one modality I recommend to everyone without reservation, and that is NVC. In a team context, practicing NVC together increases efficiency of collaboration and builds deeper trust. I have had the opportunity to work with Danny in several settings. He brings to NVC not only his deep knowledge and experience with the modality, but also his compassion and presence. Ultimately, NVC is about what it means to be human, about deep connection to oneself and to others. Danny embodies these spirits and one could not be in better hands."</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Bo Shao, Chairman Evolve Ventures and Foundation</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 20px; padding: 30px; break-inside: avoid; margin-bottom: 20px;">
+            <p style="font-size: 14px; line-height: 1.75; margin: 0 0 16px; color: #6b5f52;">"My fiance and I joined "The Art of Communication" together because, simply put, we were desperately unskillful at reaching one another with our words. I thought we were joining a class to learn some tools, but it became so much more. Learning and using NVC actually facilitated deepening relationships in our whole group, so every week we dropped back into a supportive, loving and curious community of folks who joined us on our journey. Danny facilitated that with his sound containership and generous heart. He and his crew of skillful helpers held such solid, loving space while also providing practical tools, handouts and exercises to take into our daily life. I felt so supported and safe to hobble like a baby giraffe learning to speak her heart again!"</p>
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Laryssa Toroshenko</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pad-lg" style="background: #ffffff; padding: 90px 64px;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 48px;">Course Practicals</h2>
+        <div class="stack-mobile" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center;">
+          <div style="background: #fdf6ee; border-radius: 22px; padding: 36px 28px;">
+            <img src="../assets/pages/ost-calendar.png" alt="" style="width: 88px; height: 88px; display: block; margin: 0 auto 20px;">
+            <h3 style="font-size: 18px; font-weight: 500; margin: 0 0 10px;">Times &amp; Dates</h3>
+            <p style="font-size: 14px; line-height: 1.65; margin: 0; color: #8a7c6b;">The next cohort is yet to be scheduled. The previous cohort met on Sundays, 9am–12pm PT / 12–3pm ET / 6–9pm CET / 7–10pm Israel. If that timing doesn’t suit, our <a href="../foundations.html">Foundations course</a> is open to the general public.</p>
+          </div>
+          <div style="background: #fdf6ee; border-radius: 22px; padding: 36px 28px;">
+            <img src="../assets/pages/Untitled-design-11.png" alt="" style="width: 88px; height: 88px; display: block; margin: 0 auto 20px;">
+            <h3 style="font-size: 18px; font-weight: 500; margin: 0 0 10px;">WhatsApp Group</h3>
+            <p style="font-size: 14px; line-height: 1.65; margin: 0; color: #8a7c6b;">For ongoing integration support throughout the week.</p>
+          </div>
+          <div style="background: #fdf6ee; border-radius: 22px; padding: 36px 28px;">
+            <img src="../assets/pages/ost-whatsapp.png" alt="" style="width: 88px; height: 88px; display: block; margin: 0 auto 20px;">
+            <h3 style="font-size: 18px; font-weight: 500; margin: 0 0 10px;">Cost</h3>
+            <p style="font-size: 14px; line-height: 1.65; margin: 0 0 12px; color: #8a7c6b;">Offered on a gift-economy basis.</p>
+            <a href="../how-we-relate-to-money/" style="font-size: 14px; font-weight: 600;">Click here to learn more →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="pad-md" style="padding: 60px 64px 90px;">
+      <div class="pad-md" style="max-width: 1180px; margin: 0 auto; background: #D97757; border-radius: 32px; padding: 72px 64px; text-align: center;">
+        <h2 style="color: #ffffff; font-size: 30px; font-weight: 500; margin: 0 0 16px;">Closed for Registration</h2>
+        <p style="color: #fff; opacity: 0.9; font-size: 16px; margin: 0 auto 32px; max-width: 560px;">Join our newsletter to be updated with all course openings.</p>
+        <a href="../newsletter/" style="display: inline-block; background: #ffffff; color: #D97757; font-weight: 600; font-size: 15px; padding: 16px 34px; border-radius: 999px;">Join the Newsletter</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="color: #b0a493; padding: 32px 64px; text-align: center; font-size: 13px;">
+    &copy; 2026 The Art of Communication — Danny Cohen &amp; Mike Korman
+  </div>
+
+</div>
+<script src="../assets/canvas/site.js"></script>
+</body>
+</html>

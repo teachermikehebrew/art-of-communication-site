@@ -20,6 +20,7 @@ body.menu-open #menu-panel { display: flex; }
 @media (max-width: 860px) {
   .stack-mobile, .hero-stack { grid-template-columns: 1fr !important; }
   .grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
+  .masonry { column-count: 1 !important; }
   .hero-stack > *:first-child { order: 2; }
   .hero-stack > *:last-child { order: 1; }
   body { overflow-x: hidden; }
