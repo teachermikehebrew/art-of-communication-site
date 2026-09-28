@@ -5,195 +5,255 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Art of Communication — Master Communication That Works</title>
 <meta name="description" content="Nonviolent Communication training with Danny Cohen. Transform conflict into clarity, anxiety into aliveness, and isolation into intimate belonging.">
+<link rel="icon" href="assets/canvas/537305ff.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/canvas/site.css">
 </head>
 <body>
-<div class="page">
+<div class="no-shrink-text" style="width: 100%; min-height: 100vh; box-sizing: border-box; background: #fdf6ee; overflow-x: hidden; position: relative;">
 
-  <header class="site-header">
-    <a href="index.html" class="brand">
-      <img src="assets/images/logo.png" alt="Art of Communication" class="logo">
-      <span>The Art of Communication</span>
+  <!-- HEADER -->
+  <div class="pad-header" style="display: flex; align-items: center; justify-content: space-between; padding: 24px 64px;">
+    <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+      <img src="assets/canvas/537305ff.png" alt="Art of Communication" style="height: 34px; width: auto; display: block;">
+      <span style="color: #4a3c2c; font-family: 'Ubuntu', sans-serif; font-weight: 500; font-size: 15px;">The Art of Communication</span>
     </a>
-    <button aria-label="Open menu" id="menu-toggle" class="menu-btn">
-      <span class="menu-icon"><span></span><span></span><span></span></span>
+    <button aria-label="Open menu" onclick="toggleMenu()" style="background: #fff; border: none; border-radius: 999px; padding: 12px 18px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 12px rgba(74,60,44,0.08);">
+      <span style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+      </span>
     </button>
-  </header>
+  </div>
 
-  <div id="nav-overlay" class="nav-overlay" hidden></div>
-  <nav id="nav-panel" class="nav-panel" hidden>
-    <div class="nav-panel-top">
-      <button aria-label="Close menu" id="menu-close" class="close-btn">&times;</button>
+  <div id="menu-overlay"></div>
+  <div id="menu-panel">
+    <div style="display: flex; justify-content: flex-end; padding: 0 24px 16px;">
+      <button aria-label="Close menu" onclick="toggleMenu()" style="background: #f3e9db; border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; color: #4a3c2c; cursor: pointer;">&times;</button>
     </div>
-    <a href="foundations.html" class="nav-link">Foundations Course</a>
-    <a href="empathy.html" class="nav-link">Art of Empathy (Level II)</a>
-    <a href="doctors.html" class="nav-link">Doctors Cohort</a>
-    <a href="rabbis.html" class="nav-link">Rabbis Cohort</a>
-    <a href="coaching.html" class="nav-link">Executive Coaching</a>
-    <a href="blog.html" class="nav-link">Blog</a>
-    <a href="mailto:mike@artofcommunication.life" class="nav-link">Contact</a>
-    <div class="nav-cta-wrap">
-      <a href="https://art-of-communication.kit.com/introcourse" class="nav-cta">Free Intro Course</a>
+    <a href="foundations.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Foundations Course</a>
+    <a href="empathy.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Art of Empathy (Level II)</a>
+    <a href="doctors.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Doctors Cohort</a>
+    <a href="rabbis.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Rabbis Cohort</a>
+    <a href="coaching.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Executive Coaching</a>
+    <a href="blog.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Blog</a>
+    <a href="mailto:mike@artofcommunication.life" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Contact</a>
+    <div style="padding: 16px 20px 0;">
+      <a href="https://art-of-communication.kit.com/introcourse" style="display: block; text-align: center; background: #D97757; color: #fff; font-weight: 600; font-size: 14px; padding: 14px; border-radius: 999px;">Free Intro Course</a>
     </div>
-  </nav>
+  </div>
 
   <!-- HERO -->
-  <div style="padding: 40px 64px 100px;">
-    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 0.9fr; gap: 56px; align-items: center;">
+  <div class="pad-md" style="padding: 40px 64px 100px;">
+    <div class="hero-stack" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 0.9fr; gap: 56px; align-items: center;">
       <div>
-        <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 8px 18px; border-radius: 999px; color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 28px;">
-          <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent);"></span>
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 8px 18px; border-radius: 999px; color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 28px;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #D97757;"></span>
           Nonviolent Communication
         </div>
         <h1 style="font-size: 52px; line-height: 1.15; font-weight: 500; margin: 0 0 24px;">Master Communication That Works</h1>
-        <p style="font-size: 18px; line-height: 1.7; margin: 0 0 36px; max-width: 460px; color: var(--muted);">Transform conflict into clarity, anxiety into aliveness, and isolation into intimate belonging.</p>
-        <div style="display: flex; gap: 14px;">
-          <a href="https://art-of-communication.kit.com/introcourse" style="display: inline-block; padding: 16px 30px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; font-size: 15px;">Free Intro Course</a>
-          <a href="foundations.html" style="display: inline-block; padding: 16px 30px; border-radius: 999px; background: #fff; color: var(--ink); font-weight: 600; font-size: 15px;">Join Cohort</a>
+        <p style="font-size: 18px; line-height: 1.7; margin: 0 0 36px; max-width: 460px; color: #8a7c6b;">Transform conflict into clarity, anxiety into aliveness, and isolation into intimate belonging.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <a href="https://art-of-communication.kit.com/introcourse" style="display: inline-block; padding: 16px 30px; border-radius: 999px; background: #D97757; color: #fff; font-weight: 600; font-size: 15px;">Free Intro Course</a>
+          <a href="foundations.html" style="display: inline-block; padding: 16px 30px; border-radius: 999px; background: #fff; color: #4a3c2c; font-weight: 600; font-size: 15px;">Join Cohort</a>
         </div>
       </div>
       <div style="position: relative;">
-        <div style="position: absolute; top: -24px; right: -24px; width: 100%; height: 100%; background: var(--peach); border-radius: 32px;"></div>
-        <img src="assets/images/hero.png" alt="" style="position: relative; width: 100%; border-radius: 32px; display: block; object-fit: cover; aspect-ratio: 4/3.2;">
+        <div style="position: absolute; top: -24px; right: -24px; width: 100%; height: 100%; background: #f3ddc4; border-radius: 32px;"></div>
+        <img src="assets/home/hero-connection.jpg" alt="Two friends in warm conversation by a campfire" style="position: relative; width: 100%; border-radius: 32px; display: block; object-fit: cover; aspect-ratio: 4/3.2;">
       </div>
     </div>
   </div>
 
   <!-- THE STRUGGLE -->
-  <div style="background: #ffffff; padding: 100px 64px; border-radius: 40px 40px 0 0;">
-    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1fr; gap: 64px;">
+  <div class="pad-lg" style="background: #ffffff; padding: 100px 64px; border-radius: 40px 40px 0 0;">
+    <div class="stack-mobile" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1fr; gap: 64px;">
       <div>
-        <div style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 16px;">THE STRUGGLE</div>
+        <div style="color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 16px;">THE STRUGGLE</div>
         <h2 style="font-size: 32px; font-weight: 500; line-height: 1.25; margin: 0 0 24px;">Stop Feeling Stuck in Your Head. Start Living in Deep Connection.</h2>
-        <p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: var(--muted);">You long for authentic connection but find yourself overthinking, avoiding conflict, or repeating the same painful patterns. You're not broken — you just need the right tools and community.</p>
-        <p style="font-size: 16px; line-height: 1.75; margin: 0; color: var(--muted);">You know how you want to show up, but in charged moments, you lose access to that grounded version of yourself.</p>
+        <p style="font-size: 16px; line-height: 1.75; margin: 0 0 16px; color: #8a7c6b;">You long for authentic connection but find yourself overthinking, avoiding conflict, or repeating the same painful patterns. You're not broken — you just need the right tools and community to help you communicate from your heart instead of your head.</p>
+        <p style="font-size: 16px; line-height: 1.75; margin: 0; color: #8a7c6b;"><strong style="color: #4a3c2c;">The worst part?</strong> You know how you <em>want</em> to show up, but in charged moments, you lose access to that grounded, compassionate version of yourself.</p>
       </div>
       <div style="display: flex; flex-direction: column; gap: 16px;">
-        <div style="background: var(--bg); border-radius: 18px; padding: 24px 28px;">
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px;">Trapped in your head</div>
-          <div style="font-size: 14px; line-height: 1.6; color: var(--muted);">Overthinking instead of feeling present and grounded</div>
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 24px 28px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: #4a3c2c;">Trapped in your head</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">Overthinking the interaction instead of feeling present and grounded</div>
         </div>
-        <div style="background: var(--bg); border-radius: 18px; padding: 24px 28px;">
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px;">Repeating old patterns</div>
-          <div style="font-size: 14px; line-height: 1.6; color: var(--muted);">The same conflicts escalate or shut down, nothing resolved</div>
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 24px 28px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: #4a3c2c;">Repeating old patterns</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">The same conflicts escalate or shut down, nothing actually gets resolved</div>
         </div>
-        <div style="background: var(--bg); border-radius: 18px; padding: 24px 28px;">
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px;">Carrying it all alone</div>
-          <div style="font-size: 14px; line-height: 1.6; color: var(--muted);">Exhausted trying to figure out relationships without support</div>
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 24px 28px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: #4a3c2c;">Carrying it all alone</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">Exhausted from trying to figure out relationships without guidance or support</div>
         </div>
-        <div style="background: var(--bg); border-radius: 18px; padding: 24px 28px;">
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px;">Missing real intimacy</div>
-          <div style="font-size: 14px; line-height: 1.6; color: var(--muted);">Settling for surface-level when you crave true belonging</div>
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 24px 28px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 6px; color: #4a3c2c;">Missing real intimacy</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">Settling for surface-level interactions when you're craving true belonging</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- DANNY BIO -->
-  <div style="background: #ffffff; padding: 40px 64px 100px;">
-    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: center;">
-      <div style="position: relative;">
-        <div style="position: absolute; bottom: -20px; left: -20px; width: 140px; height: 140px; border-radius: 50%; background: var(--peach); z-index: 0;"></div>
-        <img src="assets/images/danny-bio.png" alt="Danny Cohen" style="position: relative; z-index: 1; width: 100%; border-radius: 24px; display: block; object-fit: cover;">
+  <div class="pad-lg" style="background: #ffffff; padding: 40px 64px 100px;">
+    <div class="stack-mobile" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: center;">
+      <div style="position: relative; max-width: 340px;">
+        <div style="position: absolute; bottom: -20px; left: -20px; width: 140px; height: 140px; border-radius: 50%; background: #f3ddc4; z-index: 0;"></div>
+        <img src="assets/canvas/c22413f0.jpg" alt="Danny Cohen" style="position: relative; z-index: 1; width: 100%; border-radius: 24px; display: block; object-fit: cover; aspect-ratio: 4/5; object-position: center 20%;">
       </div>
       <div>
-        <div style="color: var(--accent); font-size: 13px; font-weight: 600; margin-bottom: 16px;">HI, I'M DANNY</div>
-        <p style="font-size: 16px; line-height: 1.8; margin: 0 0 16px; color: var(--muted);">I know how painful it can be to feel cut off — from yourself, from others, and from the kind of life you long to live. The anxiety and patterns that leave you feeling alone aren't your fault.</p>
-        <p style="font-size: 16px; line-height: 1.8; margin: 0; color: var(--muted);">For the past 15 years, I've helped thousands of people move past these struggles, drawing on Nonviolent Communication, psychotherapy, and over a year of silent meditation retreats. I'm here to guide you with compassion and practical tools.</p>
+        <div style="color: #D97757; font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 16px;">HI, I'M DANNY</div>
+        <p style="font-size: 16px; line-height: 1.8; margin: 0 0 16px; color: #8a7c6b;">I know how painful it can be to feel cut off — from yourself, from others, and from the kind of life you long to live. The anxiety, self-criticism, and patterns that leave you feeling alone or distant in relationships aren't your fault.</p>
+        <p style="font-size: 16px; line-height: 1.8; margin: 0 0 16px; color: #8a7c6b;">For the past 15 years, I've helped thousands of people — parents, professionals, and seekers — move past these struggles. My background includes trainings in Nonviolent Communication, many kinds of psychotherapy, and over a year of silent meditation retreats.</p>
+        <p style="font-size: 16px; line-height: 1.8; margin: 0; color: #8a7c6b;">I believe life is better when we're in flowing, authentic connection with ourselves and each other. I'm here to guide you with both compassion and practical tools, so you can speak with clarity, build trust, and experience the intimacy, confidence, and aliveness you've been missing.</p>
       </div>
     </div>
   </div>
 
   <!-- TESTIMONIALS 1 -->
-  <div style="background: var(--tint); padding: 100px 64px;">
+  <div class="pad-lg" style="background: #f7ede0; padding: 100px 64px;">
     <div style="max-width: 1180px; margin: 0 auto;">
-      <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 48px;">Stories of Transformation</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 12px;">Stories of Transformation</h2>
+      <p style="text-align: center; color: #8a7c6b; font-size: 16px; margin: 0 0 48px;">Parents, professionals, and seekers who found their way back to connection</p>
+      <div class="stack-mobile" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
         <div style="background: #ffffff; border-radius: 20px; padding: 32px;">
-          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: var(--body-text);">"There is one modality I recommend to everyone without reservation, and that is NVC. Danny brings not only his deep knowledge but also his compassion and presence."</p>
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500;">Bo Shao</div>
-          <div style="font-size: 13px; color: var(--footer-text);">Chairman, Evolve Ventures and Foundation</div>
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #6b5f52;">"There is one modality I recommend to everyone without reservation, and that is NVC. Danny brings not only his deep knowledge but also his compassion and presence."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Bo Shao</div>
+          <div style="font-size: 13px; color: #b0a493;">Chairman, Evolve Ventures and Foundation</div>
         </div>
         <div style="background: #ffffff; border-radius: 20px; padding: 32px;">
-          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: var(--body-text);">"This course gave us powerful practices that helped us navigate some of our most difficult conversations — a magical combination for learning."</p>
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500;">Sydney Bolger</div>
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #6b5f52;">"This course gave us powerful practices that helped us navigate some of our most difficult conversations. Danny creates a container that invites both deep vulnerability and playfulness, a magical combination for learning."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Sydney Bolger</div>
         </div>
         <div style="background: #ffffff; border-radius: 20px; padding: 32px;">
-          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: var(--body-text);">"The content renews me with hope in a way that I haven't experienced in a long time. I can imagine a beautiful world where needs are met."</p>
-          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500;">Sarah Rashba</div>
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #6b5f52;">"The content renews me with hope in a way that I haven't experienced in a long time. I feel hopeful about my ability to connect with others, and can imagine a beautiful world where needs are acknowledged and met."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Sarah Rashba</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- 3 STEPS -->
-  <div style="background: var(--bg); padding: 100px 64px;">
+  <div class="pad-lg" style="background: #fdf6ee; padding: 100px 64px;">
     <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 12px; text-align: center;">PATH TO TRANSFORMATION</div>
       <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 48px;">From Stuck to Flowing</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
-        <div style="background: #ffffff; border-radius: 24px; padding: 36px 28px;">
-          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--peach); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Ubuntu', sans-serif; font-weight: 700; margin-bottom: 20px;">1</div>
-          <h3 style="font-size: 19px; margin: 0 0 10px; font-weight: 500;">Enter a Safe Space</h3>
-          <p style="font-size: 14px; line-height: 1.7; margin: 0 0 14px; color: var(--muted);">Download our guide, or join a free intro gathering and feel the relief of presence and care.</p>
-          <a href="https://art-of-communication.kit.com/introcourse" style="font-size: 14px; font-weight: 600;">Get the Guide →</a>
+      <div class="stack-mobile" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
+        <div style="background: #ffffff; border-radius: 24px; overflow: hidden;">
+          <img src="assets/home/step-coaches.jpg" alt="Some of our coaches" style="width: 100%; display: block; aspect-ratio: 3/2; object-fit: cover;">
+          <div style="padding: 28px 28px 36px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #f3ddc4; color: #D97757; display: flex; align-items: center; justify-content: center; font-family: 'Ubuntu', sans-serif; font-weight: 700; margin-bottom: 20px;">1</div>
+            <h3 style="font-size: 19px; margin: 0 0 10px; font-weight: 500;">Enter a Safe Space</h3>
+            <p style="font-size: 14px; line-height: 1.7; margin: 0 0 14px; color: #8a7c6b;">Download our guide to begin sensing into this practice, or join a free intro gathering where you'll immediately feel the relief of presence, honesty, and care. (Above: some of our coaches.)</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px 20px;">
+              <a href="https://art-of-communication.kit.com/introcourse" style="font-size: 14px; font-weight: 600;">Get the Guide →</a>
+              <a href="foundations.html#intro-session" style="font-size: 14px; font-weight: 600;">Intro Session →</a>
+            </div>
+          </div>
         </div>
-        <div style="background: #ffffff; border-radius: 24px; padding: 36px 28px;">
-          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--peach); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Ubuntu', sans-serif; font-weight: 700; margin-bottom: 20px;">2</div>
-          <h3 style="font-size: 19px; margin: 0 0 10px; font-weight: 500;">Learn Tools That Work</h3>
-          <p style="font-size: 14px; line-height: 1.7; margin: 0 0 14px; color: var(--muted);">Join our 10-week cohort. Weekly practice, real skills, a supportive community.</p>
-          <a href="foundations.html" style="font-size: 14px; font-weight: 600;">Join Cohort →</a>
+        <div style="background: #ffffff; border-radius: 24px; overflow: hidden;">
+          <img src="assets/home/step-cohort.jpg" alt="Danny teaching a cohort on Zoom" style="width: 100%; display: block; aspect-ratio: 3/2; object-fit: cover;">
+          <div style="padding: 28px 28px 36px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #f3ddc4; color: #D97757; display: flex; align-items: center; justify-content: center; font-family: 'Ubuntu', sans-serif; font-weight: 700; margin-bottom: 20px;">2</div>
+            <h3 style="font-size: 19px; margin: 0 0 10px; font-weight: 500;">Learn Tools That Actually Work</h3>
+            <p style="font-size: 14px; line-height: 1.7; margin: 0 0 14px; color: #8a7c6b;">Join our 10-week Art of Communication cohort. We meet weekly to practice real skills in a supportive community. You'll slow down, connect with your deeper wants, and discover how to express yourself with both honesty and care.</p>
+            <a href="foundations.html" style="font-size: 14px; font-weight: 600;">Join Cohort →</a>
+          </div>
         </div>
-        <div style="background: #ffffff; border-radius: 24px; padding: 36px 28px;">
-          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--peach); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Ubuntu', sans-serif; font-weight: 700; margin-bottom: 20px;">3</div>
-          <h3 style="font-size: 19px; margin: 0 0 10px; font-weight: 500;">Continual Integration</h3>
-          <p style="font-size: 14px; line-height: 1.7; margin: 0; color: var(--muted);">Ongoing community with bi-weekly practice — your map back to yourself.</p>
+        <div style="background: #ffffff; border-radius: 24px; overflow: hidden;">
+          <img src="assets/home/step-community.jpg" alt="Our community" style="width: 100%; display: block; aspect-ratio: 3/2; object-fit: cover;">
+          <div style="padding: 28px 28px 36px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #f3ddc4; color: #D97757; display: flex; align-items: center; justify-content: center; font-family: 'Ubuntu', sans-serif; font-weight: 700; margin-bottom: 20px;">3</div>
+            <h3 style="font-size: 19px; margin: 0 0 10px; font-weight: 500;">Continual Integration in Community</h3>
+            <p style="font-size: 14px; line-height: 1.7; margin: 0; color: #8a7c6b;">Continue growing in our ongoing community with bi-weekly practice sessions. This isn't just another course — it's your map back to the grounded, connected version of yourself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS 2 -->
+  <div class="pad-lg" style="background: #ffffff; padding: 100px 64px;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 48px;">Voices from Our Community</h2>
+      <div class="stack-mobile" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div style="background: #fdf6ee; border-radius: 20px; padding: 32px;">
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #6b5f52;">"Learning NVC was like learning the fine melody of the heart, it helps navigate through the delicate and precious act of two people's conflicts coming together from off key into a harmony."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Sarah Mann</div>
+        </div>
+        <div style="background: #fdf6ee; border-radius: 20px; padding: 32px;">
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #6b5f52;">"I was able to create an open heart relationship with a complete stranger in a few simple sentence exchanges. I have never experienced anything like this."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Michael Heinrich</div>
+        </div>
+        <div style="background: #fdf6ee; border-radius: 20px; padding: 32px;">
+          <p style="font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #6b5f52;">"Learning and using NVC actually facilitated deepening relationships in our whole group, so every week we dropped back into a supportive, loving and curious community."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 14px; font-weight: 500; color: #4a3c2c;">Laryssa Toroshenko</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- WHAT'S POSSIBLE -->
-  <div style="background: var(--tint); padding: 100px 64px; text-align: center;">
-    <h2 style="font-size: 30px; font-weight: 500; margin: 0 0 48px;">What's Possible When You Step In</h2>
-    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+  <div class="pad-lg" style="background: #f7ede0; padding: 100px 64px; text-align: center;">
+    <div style="color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 12px;">STEP INTO A REGENERATIVE WAY OF RELATING</div>
+    <h2 style="font-size: 30px; font-weight: 500; margin: 0 0 16px;">What's Possible When You Step In</h2>
+    <p style="font-size: 16px; line-height: 1.75; color: #8a7c6b; max-width: 640px; margin: 0 auto 48px;">You came here because you <em>sense</em> more is possible — more connection, more ease, more aliveness in your relationships. When you practice the Art of Communication, relationships don't just improve — they <em>transform</em>.</p>
+    <div class="grid-5" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
       <div style="background: #ffffff; border-radius: 20px; padding: 28px 18px;">
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 10px;">Depth</div>
-        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: var(--muted);">Deeper intimacy and trust in your closest relationships</p>
+        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #D97757; margin-bottom: 10px;">Depth</div>
+        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #8a7c6b;">Experience deeper intimacy and trust in your closest relationships</p>
       </div>
       <div style="background: #ffffff; border-radius: 20px; padding: 28px 18px;">
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 10px;">Connection</div>
-        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: var(--muted);">Replace reactivity with clarity and confidence</p>
+        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #D97757; margin-bottom: 10px;">Connection</div>
+        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #8a7c6b;">Move from conflict to connection — replace reactivity with clarity and confidence</p>
       </div>
       <div style="background: #ffffff; border-radius: 20px; padding: 28px 18px;">
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 10px;">Support</div>
-        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: var(--muted);">Feel genuinely supported and understood</p>
+        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #D97757; margin-bottom: 10px;">Support</div>
+        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #8a7c6b;">Stop carrying it all alone — feel genuinely supported and understood</p>
       </div>
       <div style="background: #ffffff; border-radius: 20px; padding: 28px 18px;">
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 10px;">Aliveness</div>
-        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: var(--muted);">Bring aliveness to every conversation</p>
+        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #D97757; margin-bottom: 10px;">Aliveness</div>
+        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #8a7c6b;">Bring aliveness to every conversation with partners, children, colleagues, and community</p>
       </div>
       <div style="background: #ffffff; border-radius: 20px; padding: 28px 18px;">
-        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: var(--accent); margin-bottom: 10px;">Impact</div>
-        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: var(--muted);">Skills that strengthen your whole life</p>
+        <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #D97757; margin-bottom: 10px;">Impact</div>
+        <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #8a7c6b;">Develop tools that ripple everywhere — skills that strengthen your entire life</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FREE INTRO COURSE -->
+  <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px 30px;">
+    <div class="stack-mobile" style="max-width: 980px; margin: 0 auto; background: #ffffff; border-radius: 28px; padding: 48px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; box-shadow: 0 12px 40px rgba(74,60,44,0.08);">
+      <div>
+        <div style="color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 12px;">FREE 5-PART VIDEO SERIES</div>
+        <h2 style="font-size: 28px; font-weight: 500; margin: 0 0 14px;">Restore the Flow in Your Relationships.</h2>
+        <p style="font-size: 16px; line-height: 1.7; margin: 0; color: #8a7c6b;">Move from the "tug-of-war" of conflict into the flow of generative dialogue.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="https://art-of-communication.kit.com/introcourse" style="display: inline-block; padding: 16px 34px; border-radius: 999px; background: #D97757; color: #fff; font-weight: 600; font-size: 15px;">Access the Course</a>
       </div>
     </div>
   </div>
 
   <!-- FINAL CTA -->
-  <div style="padding: 60px 64px 90px;">
-    <div style="max-width: 1180px; margin: 0 auto; background: var(--accent); border-radius: 32px; padding: 80px 64px; text-align: center;">
+  <div class="pad-md" style="padding: 60px 64px 90px;">
+    <div style="max-width: 1180px; margin: 0 auto; background: #D97757; border-radius: 32px; padding: 80px 64px; text-align: center;" class="pad-md">
       <h2 style="color: #ffffff; font-size: 32px; font-weight: 500; margin: 0 0 16px;">Ready to Begin?</h2>
       <p style="color: #fff; opacity: 0.9; font-size: 16px; margin: 0 0 32px; max-width: 520px; margin-left: auto; margin-right: auto;">Join a cohort and start practicing the Art of Communication with real support, real people, and real tools.</p>
-      <a href="foundations.html" style="display: inline-block; background: #ffffff; color: var(--accent); font-weight: 600; font-size: 15px; padding: 16px 34px; border-radius: 999px;">Join a Cohort</a>
+      <a href="foundations.html" style="display: inline-block; background: #ffffff; color: #D97757; font-weight: 600; font-size: 15px; padding: 16px 34px; border-radius: 999px;">Join a Cohort</a>
     </div>
   </div>
 
-  <footer class="site-footer">&copy; 2026 The Art of Communication — Danny Cohen &amp; Mike Korman</footer>
+  <div style="color: #b0a493; padding: 32px 64px; text-align: center; font-size: 13px;">
+    &copy; 2026 The Art of Communication — Danny Cohen &amp; Mike Korman
+  </div>
 
 </div>
-<script src="assets/js/main.js"></script>
+<script src="assets/canvas/site.js"></script>
 </body>
 </html>

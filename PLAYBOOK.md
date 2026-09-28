@@ -38,12 +38,33 @@ domain, hosting decisions, and this GitHub repo.
   20% opacity (was too vivid, text illegible); "This Course Is Right for You
   If" photo switched from a hard crop to showing the full frame.
 
+- **Home page** (`index.html`) rebuilt (2026-09-28) from the canvas's chosen
+  home design — `OptionC.dc.html` ("Home — Option C (chosen: Soft & Human)"
+  in `canvas.json`; `Main.dc.html` and `OptionB` are archived alternatives).
+  Now uses the shared `assets/canvas/site.css`/`site.js` like the course
+  pages, with real copy, testimonials and step photos pulled from the live WP
+  home (images in `assets/home/`). The old placeholder's `assets/css`,
+  `assets/js`, `assets/images` were deleted (nothing else used them).
+- **Mobile**: all 7 pages checked at 390px with Playwright — no horizontal
+  overflow.
+- **No WordPress hotlinks left**: Foundations' Free Intro Session background
+  was loading from `artofcommunication.life/wp-content/...` (would break at
+  cutover); now self-hosted as `assets/canvas/intro-bg.jpg`. That section
+  also got `id="intro-session"` (the home page's step 1 links to it).
+- **Old WP URLs for the 5 course pages** (`/foundations/`, `/empathy/`,
+  `/doctors/`, `/rabbis/`, `/coaching/`) redirect to the new `.html` pages via
+  stub `<slug>/index.html` files.
+
 **Not started / explicitly deferred:**
-- **Home page** (`index.html`) — still the original placeholder draft, never
-  got the real-content pass the 5 course pages got.
 - **Blog page** (`blog.html`) — just a "coming soon" stub.
-- **Mobile responsiveness** — basic breakpoints added (stacking grids,
-  smaller padding) but never actually tested on a phone-sized viewport.
+- **The other ~40 WordPress pages** (full list: `wp-sitemap-posts-page-1.xml`
+  and `wp-sitemap-posts-post-1.xml` on the live site). Mike went through them
+  in a chat on 2026-09-27 and decided which to build vs. drop, but that list
+  was NOT recorded here — get it from Mike, then record it below. Each
+  dropped page should get a redirect stub (like the 5 above) so old links in
+  emails/Google don't 404 after cutover.
+- **Note:** `learn.artofcommunication.life` is Mike's Mighty Networks
+  community — never touch that DNS record.
 - **DNS cutover** — the actual "go live" step. See below.
 
 ## The DNS cutover (the one big remaining step)
