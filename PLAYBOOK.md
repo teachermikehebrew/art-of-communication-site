@@ -59,16 +59,28 @@ domain, hosting decisions, and this GitHub repo.
 - **Blog page** (`blog.html`) — just a "coming soon" stub.
 - **The other WordPress pages — Mike's decision (2026-09-27, from Drive
   `Work/Danny/D 🌐 Website Rebuild/Website Rebuild - Notes.md`):**
-  - **Recreate (27 total).** Done: `/`, `/foundations`, `/empathy`,
-    `/doctors`, `/rabbis`, `/coaching` (+ `/blog` as a stub). Still to build
-    (20): `/artofempathyinterest`, `/foundationsinactive`,
-    `/home-closed-for-current-cohort`, `/accompaniment`, `/guidethanks`,
-    `/preferences`, `/paymentthanks`, `/paymentorientation`,
-    `/cancellation-policy-1-1-coaching`, `/course-cancellation-policy`,
-    `/course-cancellation-policy-selfpaced`, `/introsession`, `/newsletter`,
-    `/cohort`, `/community-gateway`, `/community`, `/pastparticipants`,
-    `/how-we-relate-to-money`, `/meditators-course`,
-    `/level-3-art-of-honesty`. Also the 3 blog posts.
+  - **Recreate (27 total) — ALL DONE (2026-09-28).** Each lives at
+    `<slug>/index.html` so the old `/<slug>/` URL works unchanged.
+    - Small pages (policies, thank-you pages, payment orientation, how we
+      relate to money, accompaniment, past participants, community gateway,
+      newsletter w/ same Kit embed `9411f62e6f`, intro session).
+    - Registration-closed variants (`/foundationsinactive`,
+      `/artofempathyinterest`, `/home-closed-for-current-cohort`) were built
+      FROM THE CURRENT foundations/empathy/index pages with the cohort-specific
+      bits swapped for each page's original register-interest form — not
+      from their old WP copy (which was stale: Oct 2025 dates, old bio).
+    - `/community`, `/level-3-art-of-honesty`, `/cohort`, `/meditators-course`:
+      full content from the live pages; their advertised cohorts (2024/2025)
+      are over, so dates show as TBC with interest/newsletter CTAs.
+    - Blog: `blog.html` + `blog/index.html` (old URL) list the 3 posts; each
+      post at its original slug. Verified word-for-word coverage vs. live.
+    - `/introsession` shows the current Oct 5 2026 intro (same as the
+      Foundations page), not the stale Oct 2025 date.
+    - `/pastparticipants` "new cohort" button → current Fall 2026 application
+      (`forms.gle/pyHUu7FqG6Kyvoit8`), was last year's form.
+    - Danny's photo on all new pages is the current one (`c22413f0.jpg`).
+    - All 57 pages pass a local link/asset check; zero references to
+      `artofcommunication.life/wp-content` remain.
   - **Redirect to homepage (done — stub `<slug>/index.html` files):**
     `/jorinde`, `/testimonials`, `/the-plan`, `/introcourse`, `/attuned-q9n5`,
     `/deep-learning-q9n5`, `/heart-skill-j6r2`, `/connection-lab-8p3z`,
