@@ -46,3 +46,14 @@ body.menu-open #menu-panel { display: flex; }
   .hero-copy { padding: 380px 0 90px; }
   .hero-copy h1 { font-size: 36px !important; }
 }
+
+/* Variant: subjects spread across the photo (both edges) — text sits at the bottom, faces stay clear above */
+.hero-full.hero-bottom { align-items: flex-end; min-height: 820px; }
+.hero-bottom .hero-shade { background: linear-gradient(to top, rgba(23,17,13,0.95) 0%, rgba(23,17,13,0.82) 28%, rgba(23,17,13,0.35) 50%, rgba(23,17,13,0.05) 68%, rgba(23,17,13,0.15) 100%); }
+.hero-bottom .hero-copy { padding: 0 0 90px; }
+@media (max-width: 860px) {
+  .hero-full.hero-bottom { min-height: 0; }
+  .hero-bottom > img { height: 250px; object-position: 50% 30%; }
+  .hero-bottom .hero-shade { background: linear-gradient(to bottom, rgba(23,17,13,0.35) 0px, rgba(23,17,13,0) 90px, rgba(23,17,13,0) 170px, #17110d 250px, #17110d 100%); }
+  .hero-bottom .hero-copy { padding: 240px 0 80px; }
+}

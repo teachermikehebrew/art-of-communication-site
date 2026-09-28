@@ -268,8 +268,8 @@ V=$(date +%Y%m%d%H%M); grep -rl 'assets/canvas/site\.\(css\|js\)?v=' --include=*
 
 ## Full-photo headers
 
-Home, Foundations (+ `/foundationsinactive`), Doctors and Rabbis use the
+Home, Foundations (+ `/foundationsinactive`), Doctors, Rabbis and Empathy (+ `/artofempathyinterest`) use the
 full-bleed photo hero (`.hero-full` / `.hero-shade` / `.hero-copy` in
 site.css; per-page framing via `--pos-d` / `--pos-m`). Photos live in
-`assets/heroes/`. Still on the old boxed-photo hero: Empathy, Coaching —
-waiting on photos from Mike.
+`assets/heroes/`. Empathy uses the `.hero-bottom` variant (text along the bottom) because its
+photo has faces at both edges. Still on the old boxed-photo hero: Coaching.
