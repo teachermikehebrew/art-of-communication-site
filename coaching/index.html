@@ -275,25 +275,7 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 </div>
 
 <div class="et_pb_column_1_tb_header et_pb_column et_pb_column_1_3 et_block_column et_pb_css_mix_blend_mode_passthrough">
-<div class="et_pb_code_0_tb_header et_pb_code et_pb_module"><div class="et_pb_code_inner"><script>
-
-
-
-  jQuery(function($){
-
-$('#slide-in-open').click(function(){
-
-$(this).toggleClass('open');
-
-$('.slide-in-menu-container').toggleClass('slide-in-menu');
-
-});
-
-});
-
-
-
-</script></div></div>
+<div class="et_pb_code_0_tb_header et_pb_code et_pb_module"><div class="et_pb_code_inner"><script>document.addEventListener('click',function(e){var o=e.target.closest&&e.target.closest('#slide-in-open');if(!o)return;var c=document.querySelector('.slide-in-menu-container');if(!c)return;var open=!c.classList.contains('slide-in-menu');c.classList.toggle('slide-in-menu',open);o.classList.toggle('open',open);});</script></div></div>
 </div>
 
 <div class="et_pb_column_2_tb_header et_pb_column et_pb_column_1_3 et-last-child et_block_column et_pb_css_mix_blend_mode_passthrough">
