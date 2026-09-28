@@ -417,10 +417,13 @@ markup with `et-waypoint` images needs the same line, or its images vanish.
   (replaces the Divi code module's jQuery double-toggle). It derives the
   icon's `open` class from the panel's `slide-in-menu` class, so they
   always match. Any new page needs the same script in its header.
-- `trigger_popup` buttons never had a click handler on the static site
-  (the Bloom pop-up is timer-only). Home "Free Intro Course" / "Get the
-  Guide" and /cohort "Get the Guide" now link to
-  https://art-of-communication.kit.com/introcourse. No separate "guide"
-  opt-in exists anywhere we could find.
+- Home body buttons (both now labelled "Free Intro Course") and the
+  /cohort one open the Bloom pop-up: the pop-up div carries
+  `et_bloom_trigger_click` + `data-trigger_click=".aoc-open-popup"`, and
+  the buttons carry class `aoc-open-popup` (Bloom binds the click itself;
+  closing hides it rather than deleting it). Submit → Kit form 9323923 →
+  /aoc-intro-9v2k7/. Their href (Kit intro-course page) is only the no-JS
+  fallback. Known quirk: if someone opens and closes it within the first
+  15 s, Bloom's timer pop-up still appears once at 15 s.
 - /rabbis carries `<style id="aoc-hero-fit">` removing the hero's
   843px max-height (≥768px), so the Apply button stays inside the photo.
