@@ -32,16 +32,16 @@ body.menu-open #menu-panel { display: flex; }
   #menu-panel { width: calc(100% - 32px) !important; }
 }
 
-/* Full-bleed photo hero (home page) */
+/* Full-bleed photo hero. Per-page photo framing: style="--pos-d: X Y; --pos-m: X Y" on .hero-full */
 .hero-full { position: relative; min-height: 760px; display: flex; align-items: center; padding: 0 64px; background: #201a15; overflow: hidden; }
-.hero-full > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; }
+.hero-full > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos-d, 70% center); }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(to top right, rgba(23,17,13,0.94) 0%, rgba(23,17,13,0.78) 30%, rgba(23,17,13,0.35) 58%, rgba(23,17,13,0) 80%); }
 .hero-copy { position: relative; max-width: 1180px; width: 100%; margin: 0 auto; padding: 150px 0 130px; }
 .header-over { position: absolute; top: 0; left: 0; right: 0; z-index: 30; }
 
 @media (max-width: 860px) {
   .hero-full { display: block; min-height: 0; padding: 0 24px; background: #17110d; }
-  .hero-full > img { height: 460px; object-position: 50% center; }
+  .hero-full > img { height: 460px; object-position: var(--pos-m, 50% center); }
   .hero-shade { background: linear-gradient(to bottom, rgba(23,17,13,0.25) 0px, rgba(23,17,13,0.05) 140px, rgba(23,17,13,0.35) 300px, #17110d 460px, #17110d 100%); }
   .hero-copy { padding: 380px 0 90px; }
   .hero-copy h1 { font-size: 36px !important; }
