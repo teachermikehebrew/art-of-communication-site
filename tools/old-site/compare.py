@@ -8,7 +8,7 @@ from PIL import Image, ImageChops
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "shots")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-OLD_IP = "147.79.116.118"
+OLD_IP = "147.79.119.163"
 LOCAL = "http://127.0.0.1:8765"
 Image.MAX_IMAGE_PIXELS = None
 
