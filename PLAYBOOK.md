@@ -253,3 +253,23 @@ curl -sS -o /dev/null -w "%{http_code}\n" https://teachermikehebrew.github.io/ar
 - `CNAME` file re-added at repo root. The `.github.io` preview URL now
   redirects to the real domain (expected).
 - HTTPS certificate issued; Mike ticked Enforce HTTPS in repo Settings → Pages (`http://` now 301s to `https://`). Old WordPress hosting on Hostinger can be cancelled after a week or two of stability — keep domain + email there.
+
+## Editing `assets/canvas/site.css` or `site.js` — bump the version tag
+
+GitHub Pages serves assets with `cache-control: max-age=600`, so a browser
+can pair new page HTML with a cached old stylesheet (this broke the home
+hero for Mike on 2026-09-28). Every page links `site.css?v=<stamp>` /
+`site.js?v=<stamp>`. After changing either file, bump the stamp site-wide:
+
+```bash
+V=$(date +%Y%m%d%H%M); grep -rl 'assets/canvas/site\.\(css\|js\)?v=' --include=*.html . \
+  | xargs sed -i -E "s#(assets/canvas/site\.(css|js))\?v=[0-9]+#\1?v=$V#g"
+```
+
+## Full-photo headers
+
+Home, Foundations (+ `/foundationsinactive`), Doctors and Rabbis use the
+full-bleed photo hero (`.hero-full` / `.hero-shade` / `.hero-copy` in
+site.css; per-page framing via `--pos-d` / `--pos-m`). Photos live in
+`assets/heroes/`. Still on the old boxed-photo hero: Empathy, Coaching —
+waiting on photos from Mike.
