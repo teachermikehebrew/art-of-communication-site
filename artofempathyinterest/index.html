@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art of Empathy (Register Interest) — The Art of Communication</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/canvas/site.css">
+</head>
+<body>
+<div class="no-shrink-text" style="width: 100%; min-height: 100vh; box-sizing: border-box; background: #fdf6ee; overflow-x: hidden; position: relative;">
+
+  <!-- HEADER -->
+  <div class="pad-header" style="display: flex; align-items: center; justify-content: space-between; padding: 24px 64px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="../assets/canvas/537305ff.png" alt="Art of Communication" style="height: 34px; width: auto; display: block;">
+      <span style="color: #4a3c2c; font-family: 'Ubuntu', sans-serif; font-weight: 500; font-size: 15px;">The Art of Communication</span>
+    </div>
+    <button aria-label="Open menu" onclick="toggleMenu()" style="background: #fff; border: none; border-radius: 999px; padding: 12px 18px; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 12px rgba(74,60,44,0.08);">
+      <span style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+        <span style="width: 16px; height: 2px; background: #D97757; border-radius: 2px;"></span>
+      </span>
+    </button>
+  </div>
+
+  <div id="menu-overlay"></div>
+  <div id="menu-panel">
+    <div style="display: flex; justify-content: flex-end; padding: 0 24px 16px;">
+      <button aria-label="Close menu" onclick="toggleMenu()" style="background: #f3e9db; border: none; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; color: #4a3c2c; cursor: pointer;">&times;</button>
+    </div>
+    <a href="../foundations.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Foundations Course</a>
+    <a href="../empathy.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 600; color: #D97757; border-radius: 12px; font-size: 14px; background: #f7ede0;">Art of Empathy (Level II)</a>
+    <a href="../doctors.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Doctors Cohort</a>
+    <a href="../rabbis.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Rabbis Cohort</a>
+    <a href="../coaching.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Executive Coaching</a>
+    <a href="../blog.html" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Blog</a>
+    <a href="mailto:mike@artofcommunication.life" style="margin: 4px 20px; padding: 14px 16px; font-weight: 500; color: #4a3c2c; border-radius: 12px; font-size: 14px;">Contact</a>
+    <div style="padding: 16px 20px 0;">
+      <a href="https://art-of-communication.kit.com/introcourse" style="display: block; text-align: center; background: #D97757; color: #fff; font-weight: 600; font-size: 14px; padding: 14px; border-radius: 999px;">Free Intro Course</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="pad-md" style="padding: 40px 64px 80px;">
+    <div class="hero-stack" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 0.85fr; gap: 56px; align-items: center;">
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; padding: 8px 18px; border-radius: 999px; color: #D97757; font-size: 13px; font-weight: 600; margin-bottom: 28px;">
+          A 10-Week Deepening Course for NVC Practitioners
+        </div>
+        <h1 style="font-size: 42px; line-height: 1.2; font-weight: 500; margin: 0 0 20px;">Empathy That Transforms Relationships</h1>
+        <p style="font-size: 17px; line-height: 1.6; margin: 0 0 32px; max-width: 480px; color: #8a7c6b;">Course details TBC. Our course tends to be one 3-hour session every week for 9 weeks — register your interest and we'll let you know when the next cohort opens.</p>
+        <a href="#registration" style="display: inline-block; padding: 16px 32px; border-radius: 999px; background: #D97757; color: #fff; font-weight: 600; font-size: 15px;">Register Interest for the Next Cohort</a>
+      </div>
+      <div style="position: relative;">
+        <div style="position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; background: #f3ddc4; border-radius: 28px;"></div>
+        <img src="../assets/canvas/7ef840a4.jpg" alt="" style="position: relative; width: 100%; border-radius: 28px; display: block; object-fit: cover; aspect-ratio: 4/3.6;">
+      </div>
+    </div>
+  </div>
+
+  <!-- THE WALLS -->
+  <div class="pad-lg" style="background: #ffffff; padding: 90px 64px;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <h2 style="font-size: 32px; font-weight: 500; text-align: center; margin: 0 0 12px; max-width: 760px; margin-left: auto; margin-right: auto;">You've Completed NVC Foundations, But You Keep Hitting the Same Walls</h2>
+      <p style="text-align: center; color: #8a7c6b; font-size: 16px; margin: 0 0 48px; max-width: 640px; margin-left: auto; margin-right: auto;">You know how to reflect feelings and needs, but it often sounds clunky or feels inadequate.</p>
+      <div class="stack-mobile" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px;">
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 26px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px;">When you have judgments, empathy feels impossible</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">You struggle with the behavior of your partner, child, or mother. You know empathy would help, but part of you just wants to tell them they're wrong. You fall into "jackal responses" and can't find your way back to connection.</div>
+        </div>
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 26px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px;">You're stuck in basic reflections that don't go anywhere</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">"Are you feeling frustrated because you need respect?" gets a "yes"... then what? Your empathy sounds mechanical and "NVC-weird" instead of natural and connecting — people don't feel truly heard even when you're technically doing it "right."</div>
+        </div>
+        <div style="background: #fdf6ee; border-radius: 18px; padding: 26px;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px;">When you're personally affected, empathy disappears</div>
+          <div style="font-size: 14px; line-height: 1.6; color: #8a7c6b;">Conflicts with your landlord show you how far you still have to go. Family dynamics trigger old patterns and you lose access to your skills. You struggle to "catch yourself" in social situations when emotions are high.</div>
+        </div>
+      </div>
+      <div style="max-width: 780px; margin: 0 auto; text-align: center;">
+        <h3 style="font-size: 20px; font-weight: 500; margin: 0 0 12px;">The Deeper Frustration</h3>
+        <p style="font-size: 15px; line-height: 1.7; color: #8a7c6b; margin: 0;">You've experienced the profound relief of being truly heard. You know empathy can "cut through noise and stories and meet someone where they are." But when you try to offer that same gift to others — especially in charged moments — you feel clunky, ineffective, or completely reactive. <strong style="color: #4a3c2c;">We need to practice empathy as an art, not just a technique.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DANNY BIO -->
+  <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px;">
+    <div class="hero-stack" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 400px 1fr; gap: 56px; align-items: center;">
+      <img src="../assets/canvas/c22413f0.jpg" alt="Danny Cohen" style="width: 100%; border-radius: 24px; display: block; object-fit: cover;">
+      <div>
+        <div style="color: #D97757; font-family: 'Ubuntu', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 16px;">HI, I'M DANNY, AND I'M IN LOVE WITH EMPATHY</div>
+        <p style="font-size: 16px; line-height: 1.8; margin: 0 0 16px; color: #8a7c6b;">For over 15 years, I've been exploring empathy as an art — not just reflecting feelings and needs, but meeting people in ways that help us "fall in love" with their humanity.</p>
+        <p style="font-size: 16px; line-height: 1.8; margin: 0; color: #8a7c6b;">I've guided hundreds of people beyond basic NVC into an empathy that feels natural, connects deeply, and works even in the most challenging situations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CURRICULUM -->
+  <div class="pad-lg" style="background: #ffffff; padding: 90px 64px;">
+    <div style="max-width: 860px; margin: 0 auto;">
+      <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 48px;">The 10-Week Journey</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">1</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">"Street Giraffe" — Everyday Empathy</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Learn to offer natural, connecting empathy without sounding like an "NVC weirdo." Practice empathy that feels authentic and lands with people who've never heard of NVC.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">2</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Juicing Needs — Going for the Depths</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Move beyond surface-level reflections to touch "the beautiful heart of life." Learn to fall in love with people's humanity and reveal the hidden beauty in their struggles.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">3</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Mourning — Finding Wholeness Through Disappointment</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Master the art of empathizing with unmet needs and disappointment. Help people stay whole and present when life doesn't go as hoped.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">4</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Meeting Children — Collaborative Empathy</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Discover how to bring empathy to the unique world of children's emotions and needs without losing your adult perspective or authority.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">5</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Guilt Process — Receiving the Gifts of Remorse</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Learn to empathize skillfully with guilt and shame, helping others (and yourself) find the organic learning these difficult emotions offer.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">6</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Healing Dialogues — Repairing Ruptures</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Practice empathy that actually heals relationship wounds, not just acknowledges them. Move from rupture to deeper intimacy.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">7</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Meeting Anger — The Aikido of Empathy</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Develop the confidence to stay present and empathic with intense anger, understanding and completing "the arc of anger like an aikido master."</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">8</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Celebrations and Appreciating</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Learn to receive gratitude and appreciation empathically, and help others savor the rich moments that often get overlooked.</p>
+        </div>
+
+        <div class="acc-item" style="background: #fdf6ee;">
+          <div class="acc-head" onclick="toggleAcc(this)">
+            <div style="display: flex; align-items: baseline; gap: 14px;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 15px; font-weight: 700; color: #D97757;">9</div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 17px; font-weight: 500; color: #4a3c2c;">Integration — Empathy as a Way of Life</div>
+            </div>
+            <div class="acc-icon">+</div>
+          </div>
+          <p class="acc-body" style="margin-left: 29px;">Consolidate empathy as your core orientation and skillset, with confidence to meet whatever life brings.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- YOU CAN EXPECT TO -->
+  <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px;">
+    <div class="stack-mobile" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+      <img src="../assets/canvas/1dea7fa5.jpg" alt="" style="width: 100%; border-radius: 24px; display: block; object-fit: cover; aspect-ratio: 4/3.4;">
+      <div>
+        <h2 style="font-size: 30px; font-weight: 500; margin: 0 0 28px;">You Can Expect To:</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+
+          <div class="acc-item" style="padding: 4px 24px;">
+            <div class="acc-head" onclick="toggleAcc(this)" style="padding: 16px 0;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">Stay empathic when triggered</div>
+              <div class="acc-icon" style="font-size: 18px;">+</div>
+            </div>
+            <div class="acc-body">Maintain connection even when you have strong judgments or reactions</div>
+          </div>
+
+          <div class="acc-item" style="padding: 4px 24px;">
+            <div class="acc-head" onclick="toggleAcc(this)" style="padding: 16px 0;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">Offer natural, connecting empathy</div>
+              <div class="acc-icon" style="font-size: 18px;">+</div>
+            </div>
+            <div class="acc-body">Move beyond clunky techniques to artful presence that doesn't sound "NVC-weird"</div>
+          </div>
+
+          <div class="acc-item" style="padding: 4px 24px;">
+            <div class="acc-head" onclick="toggleAcc(this)" style="padding: 16px 0;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">Navigate family dynamics with skill</div>
+              <div class="acc-icon" style="font-size: 18px;">+</div>
+            </div>
+            <div class="acc-body">Stay present and empathic even in your most challenging relationships</div>
+          </div>
+
+          <div class="acc-item" style="padding: 4px 24px;">
+            <div class="acc-head" onclick="toggleAcc(this)" style="padding: 16px 0;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">Transform conflicts into intimacy</div>
+              <div class="acc-icon" style="font-size: 18px;">+</div>
+            </div>
+            <div class="acc-body">Use difficult moments as doorways to deeper understanding</div>
+          </div>
+
+          <div class="acc-item" style="padding: 4px 24px;">
+            <div class="acc-head" onclick="toggleAcc(this)" style="padding: 16px 0;">
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">Feel confident with intense emotions</div>
+              <div class="acc-icon" style="font-size: 18px;">+</div>
+            </div>
+            <div class="acc-body">Whether anger, guilt, grief, or celebration, you'll know how to meet what's alive</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSE DETAILS -->
+  <div class="pad-md" style="background: #ffffff; padding: 60px 64px; text-align: center;">
+    <div style="color: #D97757; font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 12px;">COURSE DETAILS</div>
+    <div style="color: #D97757; font-family: 'Ubuntu', sans-serif; font-size: 26px; font-weight: 500; margin-bottom: 12px;">Dates to be confirmed</div>
+    <p style="font-size: 15px; color: #8a7c6b; margin: 0 0 6px;">Our course tends to be one 3-hour session every week for 9 weeks.</p>
+    <p style="font-size: 15px; color: #8a7c6b; margin: 0;">9am–12pm PT / 12–3pm ET / 7–10pm Israel*</p>
+  </div>
+
+  <!-- PRICING -->
+  <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 28px; font-weight: 500; margin: 0 0 20px;">How We Relate to Money</h2>
+      <p style="font-size: 15px; line-height: 1.7; color: #8a7c6b; margin: 0 0 48px;">Ah yes, cost, the lock on the door of entry to what we desire. So deeply ingrained in our society is the transaction — unlock access by giving over money. I mourn that the economy of interdependence, relationality, and gift has been eclipsed by the economy of exchange and accumulation. These teachings are so precious to me that I want everybody to have them — I believe they have a key role to play in creating a sustainable and thriving world, and I want to make them available to people of economically diverse backgrounds. Sharing this path is my passion as well as the source of my livelihood; your financial contribution helps me and my team meet our needs so we can live, give, and teach from a resourced place. With all that in mind, we offer a sliding scale, your choice, in consideration of your budget and your desire to support our team and this work. Less or more than that range is welcome too, upon request.</p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <div style="background: #ffffff; border-radius: 20px; padding: 24px 34px; text-align: center;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 26px; font-weight: 500;">$500</div>
+        </div>
+        <div style="background: #ffffff; border-radius: 20px; padding: 24px 34px; text-align: center;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 26px; font-weight: 500;">$700</div>
+        </div>
+        <div style="background: #ffffff; border-radius: 20px; padding: 24px 34px; text-align: center;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 26px; font-weight: 500;">$900</div>
+        </div>
+        <div style="background: #ffffff; border-radius: 20px; padding: 24px 34px; text-align: center;">
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 26px; font-weight: 500;">$1,200</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGISTER INTEREST -->
+  <div id="registration" class="pad-lg" style="background: #f7ede0; padding: 90px 64px;">
+    <div style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <div style="color: #D97757; font-family: 'Ubuntu', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 12px;">REGISTRATION CURRENTLY CLOSED</div>
+      <h2 style="font-size: 34px; font-weight: 500; margin: 0 0 20px;">Register Interest for the Next Cohort</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #8a7c6b; margin: 0 0 32px;">The Art of Empathy is for people who have completed NVC Level 1 foundations with Danny, or equivalent training. Fill out the interest form and we'll email you as soon as the next cohort's dates are confirmed.</p>
+      <a href="https://forms.gle/1ZPVQGmo7PD5p5by5" style="display: inline-block; padding: 16px 34px; border-radius: 999px; background: #D97757; color: #fff; font-weight: 600; font-size: 15px;">Click Here to Register Interest</a>
+    </div>
+  </div>
+
+  <!-- VOICES / VIDEO -->
+  <div class="pad-lg" style="background: #ffffff; padding: 90px 64px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 30px; font-weight: 500; margin: 0 0 40px;">Voices from Our Community</h2>
+      <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 16px 48px rgba(74,60,44,0.12); aspect-ratio: 16/9;">
+        <iframe src="https://www.youtube.com/embed/PyPZ50r3VLo" title="Voices from Our Community" style="width: 100%; height: 100%; border: none; display: block;" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div style="position: relative; padding: 100px 64px; background: radial-gradient(circle at 15% 20%, #f6c9a0 0%, transparent 45%), radial-gradient(circle at 85% 15%, #d9c8e8 0%, transparent 40%), radial-gradient(circle at 20% 85%, #c9dde3 0%, transparent 45%), radial-gradient(circle at 90% 80%, #f0d9c4 0%, transparent 45%), #fdf6ee;">
+    <div style="max-width: 1180px; margin: 0 auto; position: relative;">
+      <h2 style="font-size: 34px; font-weight: 700; text-align: center; margin: 0 0 48px;">Voices from Our Community</h2>
+      <div class="stack-mobile" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        <div style="background: rgba(255,255,255,0.72); backdrop-filter: blur(6px); border-radius: 20px; padding: 36px 30px; text-align: center;">
+          <div style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 700; font-size: 20px; color: #2e2620; margin-bottom: 18px; line-height: 1.3;">"From off key into a harmony"</div>
+          <p style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #5c5147;">"Learning NVC was like learning the fine melody of the heart, it helps navigate through the delicate and precious act of two people's conflicts coming together from off key into a harmony."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-style: italic; font-size: 14px; font-weight: 700;">Sarah Mann</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.72); backdrop-filter: blur(6px); border-radius: 20px; padding: 36px 30px; text-align: center;">
+          <div style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 700; font-size: 20px; color: #2e2620; margin-bottom: 18px; line-height: 1.3;">"I have never experienced anything like this"</div>
+          <p style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #5c5147;">"I was able to create an open heart relationship with a complete stranger in a few simple sentence exchanges. I have never experienced anything like this."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-style: italic; font-size: 14px; font-weight: 700;">Michael Heinrich</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.72); backdrop-filter: blur(6px); border-radius: 20px; padding: 36px 30px; text-align: center;">
+          <div style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 700; font-size: 20px; color: #2e2620; margin-bottom: 18px; line-height: 1.3;">"A supportive, loving and curious community"</div>
+          <p style="font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-size: 15px; line-height: 1.7; margin: 0 0 20px; color: #5c5147;">"Learning and using NVC actually facilitated deepening relationships in our whole group, so every week we dropped back into a supportive, loving and curious community."</p>
+          <div style="font-family: 'Ubuntu', sans-serif; font-style: italic; font-size: 14px; font-weight: 700;">Laryssa Toroshenko</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="pad-lg" style="background: #fdf6ee; padding: 90px 64px;">
+    <div style="max-width: 860px; margin: 0 auto;">
+      <h2 style="font-size: 30px; font-weight: 500; text-align: center; margin: 0 0 40px;">FAQs</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+
+        <div class="acc-item" style="padding: 4px 28px;">
+          <div class="acc-head" onclick="toggleAcc(this)" style="padding: 20px 0;">
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">How much time does this actually require each week?</div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="line-height: 1.7;">This course requires a meaningful commitment: 3h live sessions every week, plus an estimated 30-40min weekly for partner practice which significantly enhances integration. We also offer integration practices which can be practiced solo (~20 min) and invite active participation on our WhatsApp group for further group connection.</div>
+        </div>
+
+        <div class="acc-item" style="padding: 4px 28px;">
+          <div class="acc-head" onclick="toggleAcc(this)" style="padding: 20px 0;">
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">What if I can't make every live session?</div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="line-height: 1.7;">Consistent presence at live sessions is really valuable for bringing the learning alive and contributing to the learning field. Session times are shared once dates are confirmed. Please plan around them for the best experience, and reach out to Mike (mike@artofcommunication.life) with any questions about attendance.</div>
+        </div>
+
+        <div class="acc-item" style="padding: 4px 28px;">
+          <div class="acc-head" onclick="toggleAcc(this)" style="padding: 20px 0;">
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">How is this different from NVC foundations?</div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="line-height: 1.7;">This goes far beyond basic reflections into advanced applications — meeting anger, healing ruptures, natural "street empathy," and empathy as spiritual practice. You'll refine technique into artistry.</div>
+        </div>
+
+        <div class="acc-item" style="padding: 4px 28px;">
+          <div class="acc-head" onclick="toggleAcc(this)" style="padding: 20px 0;">
+            <div style="font-family: 'Ubuntu', sans-serif; font-size: 16px; font-weight: 500; color: #4a3c2c;">Will Danny be teaching the course?</div>
+            <div class="acc-icon">+</div>
+          </div>
+          <div class="acc-body" style="line-height: 1.7;">Danny will be teaching most of the live sessions. Gina Seilern will be guest teaching a couple of live sessions — she's taught with us before, including our foundations course in 2025.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="pad-md" style="padding: 60px 64px 90px;">
+    <div style="max-width: 1180px; margin: 0 auto; background: #D97757; border-radius: 32px; padding: 80px 64px; text-align: center;">
+      <h2 style="color: #ffffff; font-size: 32px; font-weight: 500; margin: 0 0 16px;">You Have the Foundation. Now Develop the Artistry.</h2>
+      <p style="color: #fff; opacity: 0.9; font-size: 16px; margin: 0 0 32px; max-width: 520px; margin-left: auto; margin-right: auto;">Turn basic skills into profound connection — even in your most challenging relationships.</p>
+      <a href="https://forms.gle/1ZPVQGmo7PD5p5by5" style="display: inline-block; background: #ffffff; color: #D97757; font-weight: 600; font-size: 15px; padding: 16px 34px; border-radius: 999px;">Register Interest</a>
+    </div>
+  </div>
+
+  <div style="color: #b0a493; padding: 32px 64px; text-align: center; font-size: 13px;">
+    &copy; 2026 The Art of Communication — Danny Cohen &amp; Mike Korman
+  </div>
+
+</div>
+<script src="../assets/canvas/site.js"></script>
+</body>
+</html>
