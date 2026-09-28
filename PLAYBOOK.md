@@ -403,3 +403,11 @@ branch, then fast-forward `main` (Mike approved publishing to main); bump the
 `site.css?v=` stamp whenever site.css/js changes (see above); new full-photo
 headers: `.hero-full` markup (see index.html / doctors.html), `.hero-bottom`
 variant when faces sit at both edges of the photo.
+
+## Divi slide-in images (`et-waypoint`) — keep `aoc-waypoint-fix`
+Divi's animated images (`et-waypoint et_pb_animation_*`) start at opacity 0
+and rely on animation CSS that no longer exists (broken on the old WordPress
+site too, since the Divi 5 upgrade). Each page that has them carries
+`<style id="aoc-waypoint-fix">.et-waypoint:not(.et_pb_counters){opacity:1!important}</style>`
+before `</head>` (commit 661423c, 2026-09-28). Any new page copied from Divi
+markup with `et-waypoint` images needs the same line, or its images vanish.
