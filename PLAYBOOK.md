@@ -79,9 +79,7 @@ not plain `<a href>`: test by clicking (`navtest.py`), not by grepping. After
 any edit, run `errsweep.py` (JS errors/404s) against a local
 `python3 -m http.server`.
 
-**Known, deliberately left as on the old site:** stale dates on
-`/cohort` (May–Jul 2025), `/meditators-course`, `/level-3-art-of-honesty`
-(Apr–Jun 2025); old copy on the three registration-closed variants
+**Known, deliberately left as on the old site:** old copy on the three registration-closed variants
 (`/foundationsinactive`, `/artofempathyinterest`,
 `/home-closed-for-current-cohort`); Doctors' "Free Intro Session Sep 27"
 block (still waiting on Mike, same as before). None of these pages are in
@@ -153,9 +151,9 @@ domain, hosting decisions, and this GitHub repo.
       FROM THE CURRENT foundations/empathy/index pages with the cohort-specific
       bits swapped for each page's original register-interest form — not
       from their old WP copy (which was stale: Oct 2025 dates, old bio).
-    - `/community`, `/level-3-art-of-honesty`, `/cohort`, `/meditators-course`:
-      full content from the live pages; their advertised cohorts (2024/2025)
-      are over, so dates show as TBC with interest/newsletter CTAs.
+    - `/community`: full content from the live page. (`/level-3-art-of-honesty`,
+      `/cohort`, `/meditators-course` were also built this way but are now
+      redirects to home; see the 2026-09-29 log.)
     - Blog: `blog.html` + `blog/index.html` (old URL) list the 3 posts; each
       post at its original slug. Verified word-for-word coverage vs. live.
     - `/introsession` shows the current Oct 5 2026 intro (same as the
@@ -417,8 +415,7 @@ markup with `et-waypoint` images needs the same line, or its images vanish.
   (replaces the Divi code module's jQuery double-toggle). It derives the
   icon's `open` class from the panel's `slide-in-menu` class, so they
   always match. Any new page needs the same script in its header.
-- Home body buttons (both now labelled "Free Intro Course") and the
-  /cohort one open the Bloom pop-up: the pop-up div carries
+- Home body buttons (both now labelled "Free Intro Course") open the Bloom pop-up: the pop-up div carries
   `et_bloom_trigger_click` + `data-trigger_click=".aoc-open-popup"`, and
   the buttons carry class `aoc-open-popup` (Bloom binds the click itself;
   closing hides it rather than deleting it). Submit → Kit form 9323923 →
@@ -428,36 +425,31 @@ markup with `et-waypoint` images needs the same line, or its images vanish.
 - /rabbis carries `<style id="aoc-hero-fit">` removing the hero's
   843px max-height (≥768px), so the Apply button stays inside the photo.
 
-## Open items from the 2026-09-29 review (waiting on Mike)
+## Decisions and changes, 2026-09-29 (Mike's answers to the review)
 
-Nothing here has been changed on the site yet. Items 2–4 and 6–7 need a
-decision from Mike first.
-
-1. **Blog post headers.** The 3 blog posts have a broken-looking header: two
-   plain "Click Here" buttons that only go to the homepage, and no menu. The
-   old WordPress looked the same. Fix on offer: swap in the normal site
-   header (same menu script as other pages, see "Menu toggle" above).
-2. **Home "Step One" wording.** The text still says "by downloading our
-   guide", but the button now reads "Free Intro Course". Need Mike's
-   replacement wording.
-3. **Rabbis page: who is the consult with?** The page says "Speak with Danny
-   Cohen" and the button reads "Email me livetheheart@gmail.com". The
-   Rabbis playbook records a Sep 2 decision that the 15-minute consult is
-   with Mike, not Danny. Mike to say which is right, then make the heading
-   and button agree.
-4. **Danny's years of experience are inconsistent.** "15 years" (Home,
-   Empathy), "ten years" (Foundations), "ten+ years" (Doctors, Rabbis).
-   Mike to pick one figure, then apply it everywhere.
-5. **Typo (Rabbis, "2 x 1on1 coaching sessions" card):** "and other
-   possibly" should be "and the other possibly". Safe to fix.
-6. **Public notes.** `PLAYBOOK.md` (artofcommunication.life/PLAYBOOK.md), the
-   repo's build scripts and the GitHub repo itself are all public. No
-   passwords or keys are in them, but they hold internal notes such as
-   sign-up counts and Danny calling the canvas design "drab". Options: take
-   them off the website (they stay visible on GitHub), or make the repo
-   private (needs a paid GitHub plan to keep serving the site). Mike to
-   decide.
-7. **Out-of-date pages still live.** `/cohort` (May–Jul 2025),
-   `/level-3-art-of-honesty` (Apr–Jun 2025) and `/meditators-course`.
-   Nothing visible links to them. Fix on offer: redirect all three to the
-   homepage (as with the 22 existing redirects).
+1. **Blog post headers.** Still open: the 3 blog posts have a plain
+   "Click Here" header with no menu (old WordPress was the same). Swap in the
+   normal site header if Mike wants it.
+2. **Home "Step One"** now reads "by trying our free intro course to begin
+   sensing into this practice…" (was "by downloading our guide").
+3. **Rabbis consult is with Danny, not Mike.** (Corrects the earlier note
+   that the 15-minute consult was with Mike.) The page's heading "Speak with
+   Danny Cohen" and "Email me" button are right as they are.
+   **Still to check:** the button *shows* `livetheheart@gmail.com` but the
+   mailto link goes to `livetheheartart@gmail.com`. One of them is a typo;
+   ask which is Danny's real address.
+4. **Danny's experience is 16 years.** Applied everywhere: Home, Empathy,
+   `/artofempathyinterest`, Coaching ("15 years" → "16 years"), and
+   Foundations/Doctors/Rabbis ("over a decade" → "16 years"). Any new copy
+   should say 16 years too. (Doctors' "Sixteen years ago, I was stuck…"
+   was already right.)
+5. **Rabbis card typo fixed:** "and the other possibly with one of the
+   coaching team".
+6. **Public notes: leave as is.** Danny now likes the site because it went
+   back to the original design, which he called great. The "drab" remark
+   refers to the retired canvas design and is no longer a concern, so
+   `PLAYBOOK.md` and the repo stay public. No passwords or keys are in them;
+   keep it that way.
+7. **Old pages redirected to the homepage:** `/cohort`,
+   `/level-3-art-of-honesty`, `/meditators-course` (same meta-refresh +
+   `location.replace` stub as `/1-1denizen`). Nothing linked to them.
