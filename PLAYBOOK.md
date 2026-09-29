@@ -435,9 +435,9 @@ markup with `et-waypoint` images needs the same line, or its images vanish.
 3. **Rabbis consult is with Danny, not Mike.** (Corrects the earlier note
    that the 15-minute consult was with Mike.) The page's heading "Speak with
    Danny Cohen" and "Email me" button are right as they are.
-   **Still to check:** the button *shows* `livetheheart@gmail.com` but the
-   mailto link goes to `livetheheartart@gmail.com`. One of them is a typo;
-   ask which is Danny's real address.
+   The Rabbis button's mailto link had a typo (`livetheheartart@gmail.com`);
+   fixed to Danny's real address, `livetheheart@gmail.com` (confirmed by
+   Mike), so it now matches the button text.
 4. **Danny's experience is 16 years.** Applied everywhere: Home, Empathy,
    `/artofempathyinterest`, Coaching ("15 years" → "16 years"), and
    Foundations/Doctors/Rabbis ("over a decade" → "16 years"). Any new copy
