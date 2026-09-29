@@ -427,3 +427,37 @@ markup with `et-waypoint` images needs the same line, or its images vanish.
   15 s, Bloom's timer pop-up still appears once at 15 s.
 - /rabbis carries `<style id="aoc-hero-fit">` removing the hero's
   843px max-height (≥768px), so the Apply button stays inside the photo.
+
+## Open items from the 2026-09-29 review (waiting on Mike)
+
+Nothing here has been changed on the site yet. Items 2–4 and 6–7 need a
+decision from Mike first.
+
+1. **Blog post headers.** The 3 blog posts have a broken-looking header: two
+   plain "Click Here" buttons that only go to the homepage, and no menu. The
+   old WordPress looked the same. Fix on offer: swap in the normal site
+   header (same menu script as other pages, see "Menu toggle" above).
+2. **Home "Step One" wording.** The text still says "by downloading our
+   guide", but the button now reads "Free Intro Course". Need Mike's
+   replacement wording.
+3. **Rabbis page: who is the consult with?** The page says "Speak with Danny
+   Cohen" and the button reads "Email me livetheheart@gmail.com". The
+   Rabbis playbook records a Sep 2 decision that the 15-minute consult is
+   with Mike, not Danny. Mike to say which is right, then make the heading
+   and button agree.
+4. **Danny's years of experience are inconsistent.** "15 years" (Home,
+   Empathy), "ten years" (Foundations), "ten+ years" (Doctors, Rabbis).
+   Mike to pick one figure, then apply it everywhere.
+5. **Typo (Rabbis, "2 x 1on1 coaching sessions" card):** "and other
+   possibly" should be "and the other possibly". Safe to fix.
+6. **Public notes.** `PLAYBOOK.md` (artofcommunication.life/PLAYBOOK.md), the
+   repo's build scripts and the GitHub repo itself are all public. No
+   passwords or keys are in them, but they hold internal notes such as
+   sign-up counts and Danny calling the canvas design "drab". Options: take
+   them off the website (they stay visible on GitHub), or make the repo
+   private (needs a paid GitHub plan to keep serving the site). Mike to
+   decide.
+7. **Out-of-date pages still live.** `/cohort` (May–Jul 2025),
+   `/level-3-art-of-honesty` (Apr–Jun 2025) and `/meditators-course`.
+   Nothing visible links to them. Fix on offer: redirect all three to the
+   homepage (as with the 22 existing redirects).
