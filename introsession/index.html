@@ -253,6 +253,16 @@ transition: all 0.5s ease !important;
 <style class="et-vb-global-data et-vb-global-numeric-vars">:root{--et_global_heading_font: 'Ubuntu';--et_global_body_font: 'Inter';}</style>
 <link rel="preload" as="style" id="et-core-unified-tb-1650-tb-0-deferred-1951-cached-inline-styles" href="/wp-content/et-cache/1951/et-core-unified-tb-1650-tb-0-deferred-1951.min.css?ver=1790595938" onload="this.onload=null;this.rel='stylesheet';" />
 <style id="aoc-intro-redesign">.et_pb_section_1.et_pb_section{margin-top:0!important;padding:0!important}.et_pb_section_0_tb_header{z-index:99!important}
+.aoc-sub{font-family:'Ubuntu',Helvetica,Arial,sans-serif;font-size:22px;line-height:1.4;color:#e0702a;margin:-6px 0 18px;padding:0}
+.aoc-form{background:#fff;border:1px solid #f1dcc8;border-radius:6px;padding:20px 22px;margin:0}
+.aoc-form label{display:block;font-size:14px;font-weight:600;color:#333;margin:0 0 4px}
+.aoc-form input[type=text],.aoc-form input[type=email]{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #ccc;border-radius:3px;font-size:16px;margin:0 0 14px}
+.aoc-form .aoc-check{display:flex;gap:8px;align-items:center;font-weight:500;margin:2px 0 4px}
+.aoc-form .aoc-check input{width:18px;height:18px;margin:0}
+.aoc-small{font-size:13px;line-height:1.5;color:#777;margin:0 0 16px;padding:0}
+.aoc-form button.aoc-btn{width:100%;border:0;cursor:pointer}
+.aoc-msg{font-size:14px;color:#b4501a;margin:10px 0 0;padding:0;min-height:1em}
+.aoc-done{font-size:18px;color:#333;margin:0;padding:6px 0}
 .aoc-intro{font-family:'Inter',Helvetica,Arial,sans-serif;color:#555;font-size:16px;line-height:1.7}
 .aoc-intro h1,.aoc-intro h2,.aoc-intro h3{font-family:'Ubuntu',Helvetica,Arial,sans-serif;color:#333;font-weight:500;padding:0}
 .aoc-wrap{width:80%;max-width:1080px;margin:0 auto}
@@ -377,6 +387,7 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 						<div class="aoc-hero-text">
 							<p class="aoc-eyebrow">Free monthly intro session with Danny</p>
 							<h1>Experience the Art of Communication</h1>
+							<p class="aoc-sub">One hour, one skill you can use in your next hard conversation.</p>
 							<p class="aoc-lead">Curious about transforming your relationships and want to get a taste of how this relating feels? Join us for a free introductory session where you'll experience what makes this work so powerful.</p>
 							<div class="aoc-dates">
 								<p class="aoc-dates-label">Next session</p>
@@ -386,7 +397,16 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 								<p class="aoc-time">8:15am PT / 11:15am ET / 5:15pm CET / 6:15pm Israel</p>
 								<p class="aoc-meta">Live on Zoom &middot; 60 minutes &middot; Completely free</p>
 							</div>
-							<a class="aoc-btn" href="https://forms.gle/a2UrZ14Af635U4aL9">Save my free spot</a>
+							<form class="aoc-form" id="signup" novalidate>
+								<label for="aoc-first">First name</label>
+								<input id="aoc-first" name="first_name" type="text" autocomplete="given-name" required />
+								<label for="aoc-email">Email</label>
+								<input id="aoc-email" name="email_address" type="email" autocomplete="email" required />
+								<label class="aoc-check"><input id="aoc-intent" type="checkbox" required /> I intend to be there live</label>
+								<p class="aoc-small">We ask only those who intend to be present to register, so we know how many to expect.</p>
+								<button class="aoc-btn" type="submit">Save my free spot</button>
+								<p class="aoc-msg" role="status" aria-live="polite"></p>
+							</form>
 						</div>
 						<div class="aoc-hero-photo">
 							<img decoding="async" width="980" height="653" src="/wp-content/uploads/2024/06/Danny-43-980x653.jpg" srcset="/wp-content/uploads/2024/06/Danny-43-480x320.jpg 480w, /wp-content/uploads/2024/06/Danny-43-980x653.jpg 980w, /wp-content/uploads/2024/06/Danny-43-1280x854.jpg 1280w" sizes="(max-width: 980px) 88vw, 520px" alt="Danny Cohen smiling in a garden" />
@@ -401,7 +421,6 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 							<li><h3>Meet others</h3><p>who share your values around deep, conscious relating</p></li>
 							<li><h3>See if this community fits</h3><p>and whether it feels like the right fit for your growth journey</p></li>
 						</ul>
-						<p class="aoc-note">This isn't a sales pitch disguised as a workshop. It's a genuine opportunity to experience the quality of presence and connection that defines our learning community.</p>
 					</div>
 					<div class="aoc-guide">
 						<div class="aoc-wrap">
@@ -413,9 +432,27 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 					<div class="aoc-wrap aoc-final">
 						<h2>Join us on Wednesday 16 December</h2>
 						<p>8:15am PT / 11:15am ET / 5:15pm CET / 6:15pm Israel &middot; Live on Zoom &middot; Free</p>
-						<a class="aoc-btn" href="https://forms.gle/a2UrZ14Af635U4aL9">Save my free spot</a>
+						<a class="aoc-btn" href="#signup">Save my free spot</a>
 					</div>
 				</div>
+				<script>
+				(function () {
+					var f = document.getElementById('signup'); if (!f) return;
+					var msg = f.querySelector('.aoc-msg'), btn = f.querySelector('button');
+					f.addEventListener('submit', function (e) {
+						e.preventDefault();
+						var first = f.first_name.value.trim(), email = f.email_address.value.trim();
+						if (!first || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please add your first name and a valid email.'; return; }
+						if (!document.getElementById('aoc-intent').checked) { msg.textContent = 'Please tick the box if you intend to be there live.'; return; }
+						btn.disabled = true; msg.textContent = 'Saving your spot...';
+						var body = new URLSearchParams({ email_address: email, first_name: first });
+						body.append('tags[]', '22733726');
+						fetch('https://app.kit.com/forms/10098091/subscriptions', { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
+							.then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p class="aoc-done">You\'re in! Check your inbox for the Zoom link and details.</p>'; })
+							.catch(function () { btn.disabled = false; msg.textContent = 'Something went wrong. Please try again, or email mike@artofcommunication.life.'; });
+					});
+				})();
+				</script>
 				
 				
 			</div>		</div>
