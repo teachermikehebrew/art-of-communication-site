@@ -373,6 +373,7 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 			</div><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_left et_pb_module ">
 				<a class="et_pb_button et_d4_element et_pb_button_0 et_pb_bg_layout_light et_block_module" href="#registration">Apply here</a>
 			</div>
+			<p class="aoc-hero-webinar" style="margin:16px 0 0;padding:0;font-size:17px"><a href="#webinar" style="color:#fe8f44;text-decoration:underline">Not sure yet? Join the free intro webinar on Monday, December 7</a></p>
 			</div>
 				
 				
@@ -381,7 +382,65 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 			</div>
 				
 				
-			</div><div class="et_d4_element et_pb_section aoc-testimonial-video et_section_regular et_block_section" style="padding:56px 0 24px">
+			</div><div id="webinar" class="et_d4_element et_pb_section et_pb_section_1 et_pb_with_background et_section_regular et_block_section" >
+<style>
+#webinar .aoc-form{max-width:460px;margin:22px auto 0;text-align:left;font-family:'Source Sans Pro',Helvetica,Arial,sans-serif}
+#webinar .aoc-form label{display:block;font-size:15px;font-weight:600;color:#333;margin:0 0 4px}
+#webinar .aoc-form input[type=text],#webinar .aoc-form input[type=email]{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #ccc;border-radius:6px;font-size:16px;margin:0 0 14px;background:#fff}
+#webinar .aoc-form .aoc-check{display:flex;gap:8px;align-items:center;font-weight:500;margin:2px 0 4px}
+#webinar .aoc-form .aoc-check input{width:18px;height:18px;margin:0;flex:none}
+#webinar .aoc-small{font-size:14px;line-height:1.5;color:#666;margin:0 0 16px;padding:0}
+#webinar .aoc-form button{display:block;width:100%;border:0;border-radius:26px;cursor:pointer;background:#ffbf51;color:#fff;font-family:'Poppins',Helvetica,Arial,sans-serif;font-size:19px;font-weight:500;padding:12px 20px}
+#webinar .aoc-form button:hover{background:#f5a623}
+#webinar .aoc-form button:disabled{opacity:.6;cursor:default}
+#webinar .aoc-msg{font-size:15px;color:#b4501a;margin:10px 0 0;padding:0;min-height:1em;text-align:center}
+#webinar .aoc-done{font-size:19px;color:#333;margin:10px 0 0;padding:6px 0;text-align:center}
+</style>
+				<div class="et_d4_element et_pb_row et_pb_row_1 et_block_row">
+				<div class="et_d4_element et_pb_column_4_4 et_pb_column et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child et_block_column">
+				<div class="et_pb_module et_d4_element et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h2 class="p1"><b>experience the art of communication</b></h2>
+<p>&nbsp;</p>
+<h1 class="p1"><b>FREE INTRO WEBINAR<br /><strong>Monday, December 7, 2026</strong><br /><strong>8:30 – 9:30 AM ET / 2:30 – 3:30 PM CET / 3:30 – 4:30 PM Israel</strong><br /></b></h1></div>
+			</div>
+			</div>
+			</div><div class="et_d4_element et_pb_row et_pb_row_2 et_block_row">
+				<div class="et_d4_element et_pb_column_4_4 et_pb_column et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child et_block_column">
+				<div class="et_pb_module et_d4_element et_pb_text et_pb_text_3  et_pb_text_align_center et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h1>Like to get a taste of how this relating feels?</h1>
+<p>Join Danny for a free one-hour intro webinar on Zoom, three weeks before the cohort begins.</p>
+<form class="aoc-form" id="webinar-signup" novalidate>
+<label for="aoc-first">First name</label>
+<input id="aoc-first" name="first_name" type="text" autocomplete="given-name" required />
+<label for="aoc-email">Email</label>
+<input id="aoc-email" name="email_address" type="email" autocomplete="email" required />
+<label class="aoc-check"><input id="aoc-intent" type="checkbox" required /> I intend to be there live</label>
+<p class="aoc-small">We ask only those who intend to be present to register, so we know how many to expect. Everyone who registers gets the recording.</p>
+<button type="submit">Save my free spot</button>
+<p class="aoc-msg" role="status" aria-live="polite"></p>
+</form></div>
+			</div>
+			</div>
+			</div>
+<script>
+(function () {
+	var f = document.getElementById('webinar-signup'); if (!f) return;
+	var msg = f.querySelector('.aoc-msg'), btn = f.querySelector('button');
+	f.addEventListener('submit', function (e) {
+		e.preventDefault();
+		var first = f.first_name.value.trim(), email = f.email_address.value.trim();
+		if (!first || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please add your first name and a valid email.'; return; }
+		if (!document.getElementById('aoc-intent').checked) { msg.textContent = 'Please tick the box if you intend to be there live.'; return; }
+		btn.disabled = true; msg.textContent = 'Saving your spot...';
+		var body = new URLSearchParams({ email_address: email, first_name: first });
+		body.append('tags[]', '23019360');
+		fetch('https://app.kit.com/forms/10146627/subscriptions', { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
+			.then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p class="aoc-done">You\'re in! Check your inbox for the Zoom link and details.</p>'; })
+			.catch(function () { btn.disabled = false; msg.textContent = 'Something went wrong. Please try again, or email mike@artofcommunication.life.'; });
+	});
+})();
+</script>
+</div><div class="et_d4_element et_pb_section aoc-testimonial-video et_section_regular et_block_section" style="padding:56px 0 24px">
 <style>.aoc-testimonial-video .et_pb_video_box video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}</style>
 <div class="et_pb_row et_block_row">
 <div class="et_pb_column et_pb_column_4_4 et-last-child et_block_column et_pb_css_mix_blend_mode_passthrough">
