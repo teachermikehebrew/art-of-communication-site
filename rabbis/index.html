@@ -381,7 +381,68 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 			</div>
 				
 				
-			</div><div class="et_d4_element et_pb_section aoc-testimonial-video et_section_regular et_block_section" style="padding:56px 0 24px">
+			</div><div id="webinar" class="et_d4_element et_pb_section aoc-webinar et_section_regular et_block_section">
+<style>
+.aoc-webinar.et_pb_section{background:linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,.8)),url(/wp-content/uploads/2024/07/10-1.png) center/cover no-repeat #eaeaea;padding:64px 0}
+.aoc-webinar .aoc-w-wrap{width:80%;max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.aoc-webinar .aoc-w-eyebrow{font-family:'Ubuntu',Helvetica,Arial,sans-serif;font-size:17px;font-weight:500;text-transform:uppercase;color:#fe8f44;margin:0 0 10px;padding:0}
+.aoc-webinar h2.aoc-w-title{font-family:'Ubuntu',Helvetica,Arial,sans-serif;font-size:40px;line-height:1.2;font-weight:600;color:#333;margin:0 0 14px;padding:0}
+.aoc-webinar .aoc-w-lead{font-family:'Source Sans Pro',sans-serif;font-size:20px;line-height:1.7;color:#555;margin:0 0 22px;padding:0}
+.aoc-webinar .aoc-w-date{font-family:'Ubuntu',Helvetica,Arial,sans-serif;font-size:24px;font-weight:600;color:#333;margin:0 0 4px;padding:0}
+.aoc-webinar .aoc-w-time{font-family:'Source Sans Pro',sans-serif;font-size:18px;color:#555;margin:0 0 4px;padding:0}
+.aoc-webinar .aoc-w-meta{font-family:'Source Sans Pro',sans-serif;font-size:16px;color:#777;margin:0;padding:0}
+.aoc-webinar .aoc-form{background:#fff;border:1px solid #f1dcc8;border-radius:8px;padding:24px 26px;margin:0;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.aoc-webinar .aoc-form label{display:block;font-size:15px;font-weight:600;color:#333;margin:0 0 4px}
+.aoc-webinar .aoc-form input[type=text],.aoc-webinar .aoc-form input[type=email]{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #ccc;border-radius:3px;font-size:16px;margin:0 0 14px}
+.aoc-webinar .aoc-form .aoc-check{display:flex;gap:8px;align-items:center;font-weight:500;margin:2px 0 4px}
+.aoc-webinar .aoc-form .aoc-check input{width:18px;height:18px;margin:0}
+.aoc-webinar .aoc-small{font-size:13px;line-height:1.5;color:#777;margin:0 0 16px;padding:0}
+.aoc-webinar .aoc-w-btn{display:block;width:100%;border:1px solid #fff;border-radius:26px;background:#e88a3f;color:#fff;font-family:'Manrope',Helvetica,Arial,sans-serif;font-size:20px;font-weight:500;padding:10px 24px;cursor:pointer}
+.aoc-webinar .aoc-w-btn:hover{background:#d9782c}
+.aoc-webinar .aoc-w-btn:disabled{opacity:.6;cursor:default}
+.aoc-webinar .aoc-msg{font-size:14px;color:#b4501a;margin:10px 0 0;padding:0}.aoc-webinar .aoc-msg:empty{display:none}
+.aoc-webinar .aoc-done{font-size:18px;color:#333;margin:0;padding:6px 0}
+@media (max-width:980px){.aoc-webinar.et_pb_section{padding:44px 0}.aoc-webinar .aoc-w-wrap{width:88%;grid-template-columns:1fr;gap:28px}.aoc-webinar h2.aoc-w-title{font-size:30px}.aoc-webinar .aoc-w-lead{font-size:18px}}
+</style>
+<div class="aoc-w-wrap">
+<div class="aoc-w-text">
+<p class="aoc-w-eyebrow">Free intro webinar</p>
+<h2 class="aoc-w-title">Like to get a taste of how this relating feels?</h2>
+<p class="aoc-w-lead">Join us for a free one-hour intro webinar with Danny.</p>
+<p class="aoc-w-date">Monday, December 7, 2026</p>
+<p class="aoc-w-time">8:30 &ndash; 9:30 AM ET / 2:30 &ndash; 3:30 PM CET / 3:30 &ndash; 4:30 PM Israel</p>
+<p class="aoc-w-meta">Live on Zoom &middot; 60 minutes &middot; Free</p>
+</div>
+<form class="aoc-form" id="webinar-signup" novalidate>
+<label for="aoc-w-first">First name</label>
+<input id="aoc-w-first" name="first_name" type="text" autocomplete="given-name" required />
+<label for="aoc-w-email">Email</label>
+<input id="aoc-w-email" name="email_address" type="email" autocomplete="email" required />
+<label class="aoc-check"><input id="aoc-w-intent" type="checkbox" required /> I intend to be there live</label>
+<p class="aoc-small">We ask only those who intend to be present to register, so we know how many to expect.</p>
+<button class="aoc-w-btn" type="submit">Save my free spot</button>
+<p class="aoc-msg" role="status" aria-live="polite"></p>
+</form>
+</div>
+<script>
+(function () {
+	var f = document.getElementById('webinar-signup'); if (!f) return;
+	var msg = f.querySelector('.aoc-msg'), btn = f.querySelector('button');
+	f.addEventListener('submit', function (e) {
+		e.preventDefault();
+		var first = f.first_name.value.trim(), email = f.email_address.value.trim();
+		if (!first || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = 'Please add your first name and a valid email.'; return; }
+		if (!document.getElementById('aoc-w-intent').checked) { msg.textContent = 'Please tick the box if you intend to be there live.'; return; }
+		btn.disabled = true; msg.textContent = 'Saving your spot...';
+		var body = new URLSearchParams({ email_address: email, first_name: first });
+		body.append('tags[]', '23019360');
+		fetch('https://app.kit.com/forms/10146627/subscriptions', { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
+			.then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p class="aoc-done">You\'re in! Check your inbox for the Zoom link and details.</p>'; })
+			.catch(function () { btn.disabled = false; msg.textContent = 'Something went wrong. Please try again, or email mike@artofcommunication.life.'; });
+	});
+})();
+</script>
+</div><div class="et_d4_element et_pb_section aoc-testimonial-video et_section_regular et_block_section" style="padding:56px 0 24px">
 <style>.aoc-testimonial-video .et_pb_video_box video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}</style>
 <div class="et_pb_row et_block_row">
 <div class="et_pb_column et_pb_column_4_4 et-last-child et_block_column et_pb_css_mix_blend_mode_passthrough">
