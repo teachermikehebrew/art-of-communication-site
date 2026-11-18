@@ -439,6 +439,13 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 				(function () {
 					var f = document.getElementById('signup'); if (!f) return;
 					var msg = f.querySelector('.aoc-msg'), btn = f.querySelector('button');
+					// Visitors from a Meta (Facebook/Instagram) ad also get the "Source - Meta ad" Kit tag.
+					var fromAd = false;
+					try {
+						var q = new URLSearchParams(location.search), src = (q.get('utm_source') || '').toLowerCase();
+						if (q.get('fbclid') || /^(meta|facebook|fb|instagram|ig)$/.test(src)) sessionStorage.setItem('aocMetaAd', '1');
+						fromAd = sessionStorage.getItem('aocMetaAd') === '1';
+					} catch (err) {}
 					f.addEventListener('submit', function (e) {
 						e.preventDefault();
 						var first = f.first_name.value.trim(), email = f.email_address.value.trim();
@@ -447,8 +454,9 @@ src="https://www.facebook.com/tr?id=329528000170477&ev=PageView&noscript=1" />
 						btn.disabled = true; msg.textContent = 'Saving your spot...';
 						var body = new URLSearchParams({ email_address: email, first_name: first });
 						body.append('tags[]', '22733726');
+						if (fromAd) body.append('tags[]', '25622163');
 						fetch('https://app.kit.com/forms/10098091/subscriptions', { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
-							.then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p class="aoc-done">You\'re in! Check your inbox for the Zoom link and details.</p>'; })
+							.then(function (r) { if (!r.ok) throw 0; f.innerHTML = '<p class="aoc-done">You\'re in! Check your inbox for the Zoom link and details.</p>'; try { if (window.fbq) fbq('track', 'Lead', { content_name: 'Free intro session' }); } catch (err) {} })
 							.catch(function () { btn.disabled = false; msg.textContent = 'Something went wrong. Please try again, or email mike@artofcommunication.life.'; });
 					});
 				})();
